@@ -1,0 +1,25 @@
+Script started on Thu 15 May 2025 02:33:52 PM EDT
+==111117== Memcheck, a memory error detector
+==111117== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==111117== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==111117== Command: ws.exe
+==111117== 
+#### Workshop Zero ####
+Subject and Section:
+OOP244 NFF
+Name:
+Arash Kheirollahi
+Student Number:
+146731245
+Email:
+akheirollahi@myseneca.ca
+==111117== 
+==111117== HEAP SUMMARY:
+==111117==     in use at exit: 0 bytes in 0 blocks
+==111117==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
+==111117== 
+==111117== All heap blocks were freed -- no leaks are possible
+==111117== 
+==111117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Thu 15 May 2025 02:33:53 PM EDT

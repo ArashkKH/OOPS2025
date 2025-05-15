@@ -1,0 +1,14 @@
+Arash Kheirollahi
+146731254
+05-16-2025
+
+The experience doing w0 is as follows:
+
+doing this workshop was really a refresher for getting back to Matrix (still having episodes from OPS) so I had taken some time to gather my mind around matrix commands.
+some other activity that was new for me is setting ssh Keys for my github repository which was a little hard for me to figure out at first how it actually worked.
+
+after setting up my ssh keys on both Windows system and matrix i had some problem fetching(pulling) since there was no switches or arguments needed but eventualy following the videos helped me to get that parts covered as well, there is one issue though, I think it is very much likely that one might forget to fetch and update matrix repository everytime they log in, im thinking of making an automatic fetch command to cover that issue, though I dont know if that would make more issues or not
+
+aaaand thats all for now.
+
+END

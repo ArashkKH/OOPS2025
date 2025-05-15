@@ -1,0 +1,14 @@
+In line number 7 of your output:
+The output should be:
+#### Workshop Zero ####
+^
+But your output is: 
+aaaa#### Workshop Zero ####
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [#] ASCII code(35)
+but you printed
+  [a] ASCII code(97)
+
