@@ -27,7 +27,7 @@ namespace seneca {
 
 // Definitions and functions go here
     void read(char* nameVar){
-        cout << "name>\n" << endl;
+        cout << "Name\n> " << endl;
         cin >> nameVar;
     }
 
