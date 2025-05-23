@@ -23,9 +23,10 @@ that my professor provided to complete my work for function whatever.
 // io.h
 #include <iostream>
 #include <stdio.h>
+#include "./cstr.h"
 
-#ifndef SENECA_CSTR_H
-#define SENECA_CSTR_H
+#ifndef SENECA_IO_H
+#define SENECA_IO_H
 
 namespace seneca {
 
@@ -38,8 +39,14 @@ namespace seneca {
 
     };
     
-    void readName(char nameVar);
+    void readName(char* nameVar);
+    void printNum(long long phoneNum);
+    void printRec(const struct PhoneRec record , size_t rowNum , const char* filter = nullptr);
+    bool readRec(struct PhoneRec& record, FILE* fp);
+    void printBook(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter = nullptr) ;
+    void setPointers(struct PhoneRec* phoneBookPtr[], struct PhoneRec phoneBook[], size_t arrSize) ;
+    void sortPhoneBook(struct PhoneRec* phoneBookPtr[] , size_t arrSize , bool sortLastNames);
 
 
 }
-#endif // !SENECA_CSTR_H 
+#endif // !SENECA_IO_H 

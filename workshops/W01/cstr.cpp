@@ -154,8 +154,5 @@ namespace seneca {
    bool isspace(char ch) {
       return ch == ' ' || ch == '\t' || ch == '\n' || ch == '\v' || ch == '\f' || ch == '\r';
    }
-
-
-
 }
 

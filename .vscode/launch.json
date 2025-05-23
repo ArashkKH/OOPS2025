@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W00",
-      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W00/build/Debug/outDebug",
+      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W01",
+      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W01/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
