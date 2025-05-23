@@ -26,7 +26,7 @@ using namespace std;
 namespace seneca {
 
 // Definitions and functions go here
-    void readName(char* nameVar){
+    void read(char* nameVar){
         cout << "name>\n" << endl;
         cin >> nameVar;
     }
@@ -54,7 +54,7 @@ namespace seneca {
         }
     }
 
-    bool readRec(struct PhoneRec& record, FILE* fp){
+    bool read(struct PhoneRec& record, FILE* fp){
         bool result = false;
         if(fscanf(fp, "%s %s %lld", record.firstName, record.lastName, &record.phoneNum) == 3){
             result = true;
@@ -62,11 +62,11 @@ namespace seneca {
         return result;
     }
 
-    void printBook(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter) {
+    void print(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter) {
         
         size_t rowNumber = 0;
         
-        for (rowNumber; rowNumber < bookSize; rowNumber++){
+        for (; rowNumber < bookSize; rowNumber++){
             printRec(*phoneBook[rowNumber] , rowNumber+1 ,filter);
         }
     }
@@ -77,7 +77,7 @@ namespace seneca {
         }
     }
 
-    void sortPhoneBook(struct PhoneRec* phoneBookPtr[] , size_t arrSize , bool sortLastNames){
+    void sort(struct PhoneRec* phoneBookPtr[] , size_t arrSize , bool sortLastNames){
         for (size_t i = 0; i < arrSize - 1 ; i++)
         {
             for (size_t j = i + 1 ; j < arrSize ; j++)

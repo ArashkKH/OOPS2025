@@ -43,7 +43,7 @@ int main() {
    if (file) {
       size_t recordsRead = 0;
       bool done = false;
-      for (; readRec(recs[recordsRead], file); recordsRead++);
+      for (; read(recs[recordsRead], file); recordsRead++);
       setPointers(recPtrs, recs, recordsRead);
       fclose(file);
       if (recordsRead > NumberOfRecords) {
@@ -54,27 +54,27 @@ int main() {
          int choice = menu();
          switch (choice) {
          case 1:
-            printBook(recPtrs, recordsRead);
+            print(recPtrs, recordsRead);
             break;
          case 2:
-            sortPhoneBook(recPtrs, recordsRead, true);
+            sort(recPtrs, recordsRead, true);
             cout << "Sorted By LAST NAME" << endl;
-            printBook(recPtrs, recordsRead);
+            print(recPtrs, recordsRead);
             break;
          case 3:
-            sortPhoneBook(recPtrs, recordsRead, false);
+            sort(recPtrs, recordsRead, false);
             cout << "Sorted By FIRST NAME" << endl;
-            printBook(recPtrs, recordsRead);
+            print(recPtrs, recordsRead);
             break;
          case 4:
             setPointers(recPtrs, recs, recordsRead);
             cout << "REVERTED to original" << endl;
-            printBook(recPtrs, recordsRead);
+            print(recPtrs, recordsRead);
             break;
          case 5:{
             char name[26]{};
-            readName(name);
-            printBook(recPtrs, recordsRead, name);
+            read(name);
+            print(recPtrs, recordsRead, name);
             break;
          }
          default:

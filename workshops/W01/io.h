@@ -39,13 +39,13 @@ namespace seneca {
 
     };
     
-    void readName(char* nameVar);
+    void read(char* nameVar);
     void printNum(long long phoneNum);
     void printRec(const struct PhoneRec record , size_t rowNum , const char* filter = nullptr);
-    bool readRec(struct PhoneRec& record, FILE* fp);
-    void printBook(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter = nullptr) ;
+    bool read(struct PhoneRec& record, FILE* fp);
+    void print(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter = nullptr) ;
     void setPointers(struct PhoneRec* phoneBookPtr[], struct PhoneRec phoneBook[], size_t arrSize) ;
-    void sortPhoneBook(struct PhoneRec* phoneBookPtr[] , size_t arrSize , bool sortLastNames);
+    void sort(struct PhoneRec* phoneBookPtr[] , size_t arrSize , bool sortLastNames);
 
 
 }
