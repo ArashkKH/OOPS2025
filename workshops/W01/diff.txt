@@ -1,14 +1,14 @@
-In line number 79 of your output:
+In line number 111 of your output:
 The output should be:
-> 4
+> 3
   ^
 But your output is: 
-> 3
+> 5
   ^
 
 Unmatched character details:
 The character in column 3 is supposed to be:
-  [4] ASCII code(52)
-but you printed
   [3] ASCII code(51)
+but you printed
+  [5] ASCII code(53)
 
