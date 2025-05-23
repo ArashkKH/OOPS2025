@@ -33,10 +33,11 @@ namespace seneca {
 
     void printNum(long long phoneNum){
         // print as (999) 999-9999
-        long long groupOne = phoneNum / 1000000;
+        long long groupOne = phoneNum / 10000000;
         long long groupTwo = (phoneNum / 10000) - (groupOne * 1000);
-        long long groupThree  = (phoneNum) - (groupOne * 1000000) - (groupTwo * 1000);
-
+        long long groupThree  = (phoneNum % 10000);
+        
+        
         cout << "(" << groupOne << ") " << groupTwo << "-" << groupThree << endl;
     }
 
@@ -46,8 +47,11 @@ namespace seneca {
                 cout << rowNum++ << ": " << record.firstName << " " << record.lastName << " ";
                 printNum(record.phoneNum);
             }
-     
-        }     
+            
+        }else{
+            cout << rowNum++ << ": " << record.firstName << " " << record.lastName << " ";
+            printNum(record.phoneNum);
+        }
     }
 
     bool readRec(struct PhoneRec& record, FILE* fp){
@@ -59,8 +63,9 @@ namespace seneca {
     }
 
     void printBook(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter) {
+        
         size_t rowNumber = 0;
-
+        
         for (rowNumber; rowNumber < bookSize; rowNumber++){
             printRec(*phoneBook[rowNumber] , rowNumber+1 ,filter);
         }
