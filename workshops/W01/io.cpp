@@ -44,7 +44,7 @@ namespace seneca {
     void printRec(const struct PhoneRec record , size_t rowNum , const char* filter){
         if(filter != nullptr){
             if (strstr(record.firstName, filter) != nullptr || strstr(record.lastName, filter) != nullptr) {
-                cout << rowNum << ": " << record.firstName << " " << record.lastName << " ";
+                cout << rowNum++ << ": " << record.firstName << " " << record.lastName << " ";
                 printNum(record.phoneNum);
             }
             
@@ -66,7 +66,7 @@ namespace seneca {
         
         size_t rowNumber = 0;
         
-        for (; rowNumber < bookSize; rowNumber++){
+        for (;rowNumber < bookSize;){
             printRec(*phoneBook[rowNumber] , rowNumber+1 ,filter);
         }
     }
