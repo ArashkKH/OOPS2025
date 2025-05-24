@@ -1,9 +1,9 @@
-Script started on Fri 23 May 2025 07:50:23 PM EDT
-==96744== Memcheck, a memory error detector
-==96744== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==96744== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==96744== Command: ws.exe
-==96744== 
+Script started on Fri 23 May 2025 07:59:11 PM EDT
+==99253== Memcheck, a memory error detector
+==99253== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==99253== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==99253== Command: ws.exe
+==99253== 
 ---------------------------
 1- Display records
 2- Sorted by last name
@@ -108,11 +108,61 @@ REVERTED to original
 ---------------------------
 0- Exit
 Select an option
-> 5
-name>
+> 3
+Sorted By FIRST NAME
+1: Apu Nahasapeemapetilon (555) 888-9999
+2: Barney Gumble (555) 612-3456
+3: Bart Simpson (555) 345-6789
+4: Carl Carlson (555) 222-3333
+5: Chief Wiggum (555) 555-6666
+6: Edna Krabappel (555) 777-8888
+7: Homer Simpson (555) 123-4567
+8: Lenny Leonard (555) 111-2222
+9: Lisa Simpson (555) 456-7891
+10: Maggie Simpson (555) 567-8901
+11: Marge Simpson (555) 234-5678
+12: Milhouse Van-Houten (555) 333-4444
+13: Moe Szyslak (555) 901-2345
+14: Montgomery Burns (555) 789-1234
+15: Ned Flanders (555) 678-9012
+16: Patty Bouvier (555) 999-1234
+17: Ralph Wiggum (555) 444-5555
+18: Selma Bouvier (555) 123-1111
+19: Seymour Skinner (555) 666-7777
+20: Waylon Smithers (555) 890-1234
 
-Homer
-2: Homer Simpson (555) 123-4567
+---------------------------
+1- Display records
+2- Sorted by last name
+3- Sorted by first name
+4- revert to original order
+5- Search
+---------------------------
+0- Exit
+Select an option
+> 5
+Name
+> Sim
+3: Bart Simpson (555) 345-6789
+7: Homer Simpson (555) 123-4567
+9: Lisa Simpson (555) 456-7891
+10: Maggie Simpson (555) 567-8901
+11: Marge Simpson (555) 234-5678
+
+---------------------------
+1- Display records
+2- Sorted by last name
+3- Sorted by first name
+4- revert to original order
+5- Search
+---------------------------
+0- Exit
+Select an option
+> 5
+Name
+> Bar
+2: Barney Gumble (555) 612-3456
+3: Bart Simpson (555) 345-6789
 
 ---------------------------
 1- Display records
@@ -126,13 +176,13 @@ Select an option
 > 0
 
 Goodbye!
-==96744== 
-==96744== HEAP SUMMARY:
-==96744==     in use at exit: 0 bytes in 0 blocks
-==96744==   total heap usage: 2 allocs, 2 frees, 73,272 bytes allocated
-==96744== 
-==96744== All heap blocks were freed -- no leaks are possible
-==96744== 
-==96744== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==99253== 
+==99253== HEAP SUMMARY:
+==99253==     in use at exit: 0 bytes in 0 blocks
+==99253==   total heap usage: 2 allocs, 2 frees, 73,272 bytes allocated
+==99253== 
+==99253== All heap blocks were freed -- no leaks are possible
+==99253== 
+==99253== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Fri 23 May 2025 07:50:46 PM EDT
+Script done on Fri 23 May 2025 07:59:27 PM EDT
