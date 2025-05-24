@@ -1,0 +1,22 @@
+Arash Kheirollahi
+146731254
+2025-05-23
+
+
+This Workshop was a some how a little complicated for me, btu since there was a very good step by step walkthrough it helped me alot to develop the program properly; while doing so and doing same assignments like this I really admire how the steps are broken down in managable portion and how pre determination of outputs and inputs would help one doing the code part of a big problem.
+
+Apart from this whole imgae achievement it also made an opportunity for me to review other materials of C like programming such as opening and reading Files.
+Not to mention that I have found myself more comfortable in using pointers throughout functions in order to change multiple values from an inner scope.
+
+Here are some of the challenges I have encountered:
+
+- one of my challenges was to managing the row number value while it was expected to have the row counter be "in order" even if it was skipping some records with filters, the issue was in two parts:
+    1. I was not using variable pointer to pass it inside the printRec function so it could be incremented within the function.
+    2. I was using the rowNum variable both as my list row number and my for loop counter, this implementation caused an issue when using the search function and the reasone is while skipping some records the row number is still incrementing and skipping some numbers when printing, this was later relized doing the --feedback submission.
+
+- another challenge that I have encountered was to manage the name of the functions used in the main file, which I find the reasone of this difficulty in (respectfully) how  questionable they have been named in the documentations. I dont find having two functions named as the same "read" and "read" a very suitable practice, whether it can be managed in the namespaces still it might make the process somehow tricky
+
+note that I have been unable to submit my lab since the debugging process have took me some time, if you wish to take a look at the code you might check `~akheirollahi/summer25/oop/OOPS2025/workshops/W01` or check the repository online at `https://github.com/ArashkKH/OOPS2025`
+
+Thank you
+-Arash KH
