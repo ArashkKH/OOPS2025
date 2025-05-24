@@ -49,7 +49,7 @@ namespace seneca {
             }
             
         }else{
-            cout << rowNum++ << ": " << record.firstName << " " << record.lastName << " ";
+            cout << ++(*rowNum) << ": " << record.firstName << " " << record.lastName << " ";
             printNum(record.phoneNum);
         }
     }
@@ -65,9 +65,10 @@ namespace seneca {
     void print(struct PhoneRec* phoneBook[], size_t bookSize ,const char* filter) {
         
         size_t rowNumber = 0;
+        size_t i = 0;
         
-        for (; rowNumber < bookSize;){
-            printRec(*phoneBook[rowNumber] , &rowNumber ,filter);
+        for (; i < bookSize; i++){
+            printRec(*phoneBook[i] , &rowNumber ,filter);
         }
     }
 
