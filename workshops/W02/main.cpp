@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/*                     Provided Code BY SENECA POLYTECHNIC                    */
+/* -------------------------------------------------------------------------- */
 /***********************************************************************
 // OOP244 Workshop #2: main module
 //
@@ -13,6 +16,9 @@
 // Name            Date            Reason
 //
 ***********************************************************************/
+// #define DEBUG
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstdio>        // For FILE, fopen, fscanf
@@ -70,7 +76,92 @@ Samples* loadStats(const char* filename) {
    return samples;
 }
 
+#ifdef DEBUG
+void testCreateSamples() {
+    std::cout << "Test: CreateSamples()... ";
+
+    const char title[] = "Test Data Set";
+    Samples* s = CreateSamples(title);
+
+    bool ok = s && s->m_title && strcmp(s->m_title, title) == 0
+              && s->m_data == nullptr && s->m_size == 0;
+
+    std::cout << (ok ? "PASS" : "FAIL") << std::endl;
+
+    delete[] s->m_title;
+    delete s;
+}
+
+void testAppend() {
+    std::cout << "Test: append()... ";
+
+    int original[] = {1, 2, 3};
+    int toAppend[] = {4, 5};
+    int* data = new int[3];
+    for (int i = 0; i < 3; ++i) data[i] = original[i];
+
+    append(data, 3, toAppend, 2);
+
+    bool ok = data[0] == 1 && data[1] == 2 && data[2] == 3 &&
+              data[3] == 4 && data[4] == 5;
+
+    std::cout << (ok ? "PASS" : "FAIL") << std::endl;
+
+    delete[] data;
+}
+
+void testAdd() {
+    std::cout << "Test: add()... ";
+
+    Samples s;
+    s.m_title = nullptr;
+    s.m_data = nullptr;
+    s.m_size = 0;
+
+    int values1[] = {10, 20};
+    int values2[] = {30};
+
+    add(s, values1, 2); // Adds [10, 20]
+    add(s, values2, 1); // Appends [30]
+
+    bool ok = s.m_size == 3 &&
+              s.m_data[0] == 10 &&
+              s.m_data[1] == 20 &&
+              s.m_data[2] == 30;
+
+    std::cout << (ok ? "PASS" : "FAIL") << std::endl;
+
+    delete[] s.m_data;
+}
+
+void testFreemem() {
+    std::cout << "Test: freemem()... ";
+
+    Samples* s = new Samples;
+    s->m_title = new char[6];
+    strcpy(s->m_title, "Hello");
+
+    s->m_data = new int[3]{1, 2, 3};
+    s->m_size = 3;
+
+    freemem(s);
+
+    bool ok = (s == nullptr);
+
+    std::cout << (ok ? "PASS" : "FAIL") << std::endl;
+}
+
+
+#endif // DEBUG
+
+
+
+
+
+
 int main() {
+   
+   #ifndef DEBUG
    const char* filename = "sensor_readings.txt";
 
    Samples* sample = loadStats(filename);
@@ -101,6 +192,15 @@ int main() {
    else {
       cerr << "Failed to load data from file: " << filename << "\n";
    }
+
+   #endif // DEBUG
+
+   #ifdef DEBUG
+   testCreateSamples() ;
+   testAppend() ;
+   testAdd() ;
+   testFreemem() ;
+   #endif // DEBUG
 
    return 0;
 }

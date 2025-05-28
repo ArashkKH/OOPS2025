@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                     Provided Code BY SENECA POLYTECHNIC                    */
+/* -------------------------------------------------------------------------- */
+
 #ifndef SENECA_SENSORANALYSIS_H
 #define SENECA_SENSORANALYSIS_H
 

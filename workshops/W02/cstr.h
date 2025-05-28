@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                     Provided Code BY SENECA POLYTECHNIC                    */
+/* -------------------------------------------------------------------------- */
+
 #ifndef SENECA_CSTR_H
 #define SENECA_CSTR_H
 namespace seneca{
