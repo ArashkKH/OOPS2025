@@ -13,6 +13,8 @@ Revision History
 ------- --------- ------------------------------------------
 Version Date      Reason
 V0.1    2025/5/22 Workshop Initiation
+V0.2    2025/5/22 Fixing Memory Leaks
+
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code 
 that my professor provided to complete my work for function whatever.
@@ -41,32 +43,11 @@ namespace seneca {
             bool validate(const char* name, unsigned long long cardNo, short cvv, short expMon, short expYear) const;//✅
 
          public:
-          CC() {
-            m_name = nullptr;
-            m_number = 0;
-            m_cvv = 0;
-            m_expMon = 0;
-            m_expYear = 0;
-         }
-          CC(const char* name, unsigned long long number, short cvv, short expMon = 12, short expYear = 26) {
-            m_name = nullptr;
-            m_number = 0;
-            m_cvv = 0;
-            m_expMon = 0;
-            m_expYear = 0;
-
-            if (validate(name, number, cvv, expMon, expYear)) {
-               aloCopy(name);
-               m_number = number;
-               m_cvv = cvv;
-               m_expMon = expMon;
-               m_expYear = expYear;
-            }
-          }
+         CC();
+         CC(const char* name, unsigned long long number, short cvv, short expMon = 12, short expYear = 26);
+         ~CC();
          
-         ~CC() {
-            deloDm();
-         };
+
             void set();//✅
             void set(const char* cc_name, unsigned long long cc_no, short cvv, short expMon, short expYear);//✅
             bool isEmpty() const;//✅
