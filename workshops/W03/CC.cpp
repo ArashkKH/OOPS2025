@@ -108,5 +108,32 @@ namespace seneca {
          display(m_name, m_number, m_expYear, m_expMon, m_cvv);
       }
    }
+
+    CC::CC() {
+            m_name = nullptr;
+            m_number = 0;
+            m_cvv = 0;
+            m_expMon = 0;
+            m_expYear = 0;
+         }
+          CC::CC(const char* name, unsigned long long number, short cvv, short expMon, short expYear) {
+            m_name = nullptr;
+            m_number = 0;
+            m_cvv = 0;
+            m_expMon = 0;
+            m_expYear = 0;
+
+            if (validate(name, number, cvv, expMon, expYear)) {
+               aloCopy(name);
+               m_number = number;
+               m_cvv = cvv;
+               m_expMon = expMon;
+               m_expYear = expYear;
+            }
+          }
+         
+         CC::~CC() {
+            deloDm();
+         };
    
 }
