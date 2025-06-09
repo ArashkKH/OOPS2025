@@ -83,7 +83,6 @@ namespace seneca {
 
    void CC::set() {
       deloDm();
-      m_name = nullptr;
       m_number = 0;
       m_cvv = 0;
       m_expMon = 0;
