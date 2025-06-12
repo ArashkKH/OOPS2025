@@ -1,9 +1,9 @@
-Script started on Thu 12 Jun 2025 02:08:13 PM EDT
-==29363== Memcheck, a memory error detector
-==29363== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==29363== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==29363== Command: ws.exe
-==29363== 
+Script started on Thu 12 Jun 2025 02:15:46 PM EDT
+==31770== Memcheck, a memory error detector
+==31770== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==31770== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==31770== Command: ws.exe
+==31770== 
 Using bool conversion overload and operator ~ to print the accounts: 
 +---+-----+--------------------------------+-------+--------------+
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
@@ -199,23 +199,23 @@ After:
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
 +---+-----+--------------------------------+-------+--------------+
 |007| HCW | Hubert Claine Wolfeschlegelste | 80000 |       889.00 |
-|008| HCW | Hubert Claine Wolfeschlegelste | 80000 |       890.00 |
+|008| HCW | Hubert Claine Wolfeschlegelste | 80000 |       888.00 |
 +---+-----+--------------------------------+-------+--------------+
 Display raw account numbers of all the accounts 
  using int conversion operator
 11111 22222 -1 44444 55555 -1 80000 80000 99999 0 -1 -1 -1 
 Display raw balances of the accounts: 
  using double conversion operator
-283.34 0.00 0.00 4444.44 555.55 0.00 889.00 890.00 0.00 0.00 0.00 0.00 0.00 
+283.34 0.00 0.00 4444.44 555.55 0.00 889.00 888.00 0.00 0.00 0.00 0.00 0.00 
 Total of 1 new accounts
 Total of 5 invalid accounts
-==29363== 
-==29363== HEAP SUMMARY:
-==29363==     in use at exit: 0 bytes in 0 blocks
-==29363==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
-==29363== 
-==29363== All heap blocks were freed -- no leaks are possible
-==29363== 
-==29363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==31770== 
+==31770== HEAP SUMMARY:
+==31770==     in use at exit: 0 bytes in 0 blocks
+==31770==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
+==31770== 
+==31770== All heap blocks were freed -- no leaks are possible
+==31770== 
+==31770== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Thu 12 Jun 2025 02:08:14 PM EDT
+Script done on Thu 12 Jun 2025 02:15:47 PM EDT
