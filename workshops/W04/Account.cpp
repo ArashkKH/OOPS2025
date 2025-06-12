@@ -140,7 +140,7 @@ namespace seneca {
 
    Account Account::operator--(int){
       Account temp = *this;
-      ++(*this);
+      --(*this);
       return temp;
    }
 
