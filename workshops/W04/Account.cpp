@@ -177,7 +177,7 @@ namespace seneca {
       return *this;
    }
    Account& Account::operator-=(double value){
-      if(*this && value > 0){
+      if(*this && value > 0 && m_balance >= value){
          m_balance -= value;
       }
 
