@@ -19,10 +19,18 @@ Person::Person(struct Person* personInfo) {
   cout << "seems like you are trying to duplicate a person" << endl << "lets see their info:" << endl ;
   personInfo->display();
   cout << "====================" << endl;
-  strcpy(m_name , personInfo->m_name);
-  strcpy(m_lastName , personInfo->m_lastName);
-  m_gender = personInfo->m_gender;
-  m_age = personInfo->m_age;
+
+  m_name = new char[10];
+  *m_name = *(personInfo->m_name);
+  m_lastName = new char[10];
+  *m_lastName = *(personInfo->m_lastName);
+  cout<< "aaaaaaaaaaa" << endl;
+  m_lastName = new char[10];
+  *m_lastName = *(personInfo->m_lastName);
+  m_gender = new char;
+  *m_gender = *(personInfo->m_gender);
+  m_age = new int;
+  *m_age = *(personInfo->m_age);
   cout << "a new Person was created called: " << *m_name << " " << m_lastName <<  endl;
 }
 
@@ -63,7 +71,7 @@ Person::~Person(){
 //======================== Modifiers =======================
 
 
-void Person::setName(char name[10]){
+void Person::setName(char* name){
   strcpy(m_name, name);
 }
 void Person::setLastName(char lname[10]){
@@ -87,11 +95,11 @@ void Person::display() const{
 
 void printPercent(int num){
   num > 100 || num < 0 ? throw std::runtime_error("!!!! Too much percent! !!!!") : cout << "|" ; 
-  for (size_t i = 1; i < (num+1) / 5 ; i++)
+  for (int i = 1; i < (num+1) / 5 ; i++)
   {
     cout << "O";
   }
-  for (size_t i = 1; i < 21 - (num+1) / 5 ; i++)
+  for (int i = 1; i < 21 - (num+1) / 5 ; i++)
   {
     cout << "-";
   }

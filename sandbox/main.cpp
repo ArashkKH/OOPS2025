@@ -14,8 +14,10 @@ int main(){
     Person* alex = new Person(bob);
     
     cout<< "changin the copy Name:" << endl;
-    alex->setName("Alex");
+    char secondName[5] = "alex";
+    alex->setName(&secondName);
     alex->display();
+    delete[] secondName;
     bob->display();
     
 
