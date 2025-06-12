@@ -1,9 +1,9 @@
-Script started on Thu 12 Jun 2025 01:40:10 PM EDT
-==10887== Memcheck, a memory error detector
-==10887== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==10887== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==10887== Command: ws.exe
-==10887== 
+Script started on Thu 12 Jun 2025 02:08:13 PM EDT
+==29363== Memcheck, a memory error detector
+==29363== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==29363== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==29363== Command: ws.exe
+==29363== 
 Using bool conversion overload and operator ~ to print the accounts: 
 +---+-----+--------------------------------+-------+--------------+
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
@@ -56,18 +56,18 @@ Attempting to withdraw too much from account #4 using -= operator:
 +---+-----+--------------------------------+-------+--------------+
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
 +---+-----+--------------------------------+-------+--------------+
-|001| TH  | Bad Account                    | ----- | ------------ |
+|001| TH  | Thufir Hawat                   | 44444 |      4444.44 |
 +---+-----+--------------------------------+-------+--------------+
 Attempting to deposit and withdraw negative amounts on account #4:
 +---+-----+--------------------------------+-------+--------------+
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
 +---+-----+--------------------------------+-------+--------------+
-|001| TH  | Bad Account                    | ----- | ------------ |
+|001| TH  | Thufir Hawat                   | 44444 |      4444.44 |
 +---+-----+--------------------------------+-------+--------------+
 +---+-----+--------------------------------+-------+--------------+
 |ROW|Init | Name                           | ACC#  |    BALANCE   |
 +---+-----+--------------------------------+-------+--------------+
-|001| TH  | Bad Account                    | ----- | ------------ |
+|001| TH  | Thufir Hawat                   | 44444 |      4444.44 |
 +---+-----+--------------------------------+-------+--------------+
 Having these two accounts: 
 +---+-----+--------------------------------+-------+--------------+
@@ -103,7 +103,7 @@ Displaying all accounts:
 |001| PA  | Paul Atreides                  | 11111 |       283.34 |
 |002| DI  | Duncan Idaho                   | 22222 |         0.00 |
 |003|     | Bad Account                    | ----- | ------------ |
-|004| TH  | Bad Account                    | ----- | ------------ |
+|004| TH  | Thufir Hawat                   | 44444 |      4444.44 |
 |005| SS  | Stilgar Sremen                 | 55555 |       555.55 |
 |006|     | Bad Account                    | ----- | ------------ |
 |007| GH  | Gurney Halleck                 | 77777 |       777.77 |
@@ -114,7 +114,7 @@ Displaying all accounts:
 |012|     | Bad Account                    | ----- | ------------ |
 |013|     | Bad Account                    | ----- | ------------ |
 +---+-----+--------------------------------+-------+--------------+
-Sum of the balances of accounts 4 and 5: -555.56
+Sum of the balances of accounts 4 and 5: 4999.99
 Attempting to change the account number of the valid account#7:
 Before: 
 +---+-----+--------------------------------+-------+--------------+
@@ -206,16 +206,16 @@ Display raw account numbers of all the accounts
 11111 22222 -1 44444 55555 -1 80000 80000 99999 0 -1 -1 -1 
 Display raw balances of the accounts: 
  using double conversion operator
-283.34 0.00 0.00 -1111.11 555.55 0.00 889.00 890.00 0.00 0.00 0.00 0.00 0.00 
+283.34 0.00 0.00 4444.44 555.55 0.00 889.00 890.00 0.00 0.00 0.00 0.00 0.00 
 Total of 1 new accounts
-Total of 6 invalid accounts
-==10887== 
-==10887== HEAP SUMMARY:
-==10887==     in use at exit: 0 bytes in 0 blocks
-==10887==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
-==10887== 
-==10887== All heap blocks were freed -- no leaks are possible
-==10887== 
-==10887== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Total of 5 invalid accounts
+==29363== 
+==29363== HEAP SUMMARY:
+==29363==     in use at exit: 0 bytes in 0 blocks
+==29363==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
+==29363== 
+==29363== All heap blocks were freed -- no leaks are possible
+==29363== 
+==29363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Thu 12 Jun 2025 01:40:11 PM EDT
+Script done on Thu 12 Jun 2025 02:08:14 PM EDT

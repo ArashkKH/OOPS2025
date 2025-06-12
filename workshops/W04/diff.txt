@@ -1,14 +1,14 @@
-In line number 59 of your output:
+In line number 202 of your output:
 The output should be:
-|001| TH  | Thufir Hawat                   | 44444 |      4444.44 |
-            ^
+|008| HCW | Hubert Claine Wolfeschlegelste | 80000 |       888.00 |
+                                                            ^
 But your output is: 
-|001| TH  | Bad Account                    | ----- | ------------ |
-            ^
+|008| HCW | Hubert Claine Wolfeschlegelste | 80000 |       890.00 |
+                                                            ^
 
 Unmatched character details:
-The character in column 13 is supposed to be:
-  [T] ASCII code(84)
+The character in column 61 is supposed to be:
+  [8] ASCII code(56)
 but you printed
-  [B] ASCII code(66)
+  [9] ASCII code(57)
 
