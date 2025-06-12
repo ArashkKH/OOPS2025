@@ -1,0 +1,14 @@
+In line number 59 of your output:
+The output should be:
+|001| TH  | Thufir Hawat                   | 44444 |      4444.44 |
+            ^
+But your output is: 
+|001| TH  | Bad Account                    | ----- | ------------ |
+            ^
+
+Unmatched character details:
+The character in column 13 is supposed to be:
+  [T] ASCII code(84)
+but you printed
+  [B] ASCII code(66)
+
