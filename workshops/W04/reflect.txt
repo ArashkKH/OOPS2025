@@ -1,0 +1,13 @@
+Arash Kheirollahi
+146731254
+2025-06-13
+
+in this workhop i have learned and gained a chance on practicing to implement diffrent operators in a C++ class.
+also I have implemented some binary member operators, type conversion, unary member and subscript operators as mentioned in lab goals.
+my main challenge was on how to imlement the operators syntax wise and not being sure what does the documentation is trying to tell me on what to do...
+so anyway it took me some time to make sense of the main logic of the project so i could understand whats going on. (later i learned i didnt need to so ...).
+still have a feeling that the syllabus is not understood properly, in which i find the reasone on how fast the titles are passing bye in lecture classes; in which i dont see the reasone in my instructors speed of teaching but in how the syllabuses of this course have been put (and squished) together.
+at the end the lab helped me more on playing with the concept of pointers and references as well.
+
+Thank you
+-Arash KH
