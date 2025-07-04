@@ -119,14 +119,14 @@ namespace seneca {
 
    std::ostream& Mark::display(std::ostream& os) const { 
       if(!isValid() && !(*this)){
-         os << (m_type == GRADE) ? "**" :"***";
+         os << ((m_type == GRADE) ? "**" : "***");
       }else {
          switch (m_type)
          {
          case GPA: {
             double value = double(*this);
             int whole = int(value);
-            int fraction = (value - whole) * 10;
+            int fraction = int((value - whole) * 10);
             char pre = (whole >= 10 ? '\0' : '0');
             os << pre << whole << '.' << fraction;
             break;
@@ -155,8 +155,8 @@ namespace seneca {
             break;
          }
 
-         return os;
       }
+      return os;
    }
 
    std::ostream& display(const Mark& mark , char type , std::ostream& os){
@@ -180,6 +180,8 @@ namespace seneca {
       char next;
 
       bool done = false;
+
+      // I used AI help on the implementation of this function from line 184 to 206
       while (!done) {
          if (!(is >> temp)) {
                cout << "Invalid integer, try again.\n> ";
