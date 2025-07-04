@@ -127,8 +127,8 @@ namespace seneca {
             double value = double(*this);
             int whole = int(value);
             int fraction = int((value - whole) * 10);
-            char pre = (whole >= 10 ? '\0' : '0');
-            os << pre << whole << '.' << fraction;
+            // char pre = (whole >= 10 ? '\0' : '0');
+            os << whole << '.' << fraction;
             break;
          }
          case MARK: {
