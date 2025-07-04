@@ -205,7 +205,43 @@ namespace seneca {
       return is;
    }
 
+   std::ifstream& operator>>(std::ifstream& is, Mark& mark) {
+      int value;
+      char type;
 
-   
+      if (is >> value) {
+         if (is.get() == ',') {
+               if (is >> type) {
+                  mark = value;
+                  mark = type; 
+               }
+         }
+      }
 
+      return is;
+   }
+
+   double operator+(double value, const Mark& mark) {
+      return value + double(mark);  
+   }
+
+   int operator+(int value, const Mark& mark) {
+      return value + int(mark);
+   }
+   double operator-(double value, const Mark& mark) {
+      return value - double(mark);  
+   }
+
+   int operator-(int value, const Mark& mark) {
+      return value - int(mark);
+   }
+
+   double operator/(double value, const Mark& mark) {
+      return value / mark.m_value; 
+   }
+
+   int operator/(int value, const Mark& mark) {
+      return value / int(mark.m_value + 0.5);
+   }
 }
+

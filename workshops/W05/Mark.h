@@ -135,17 +135,28 @@ namespace seneca {
 
       
       std::ostream& display(std::ostream& arg = std::cout) const;
+
+      friend double operator/(double value, const Mark& mark);
+      friend int operator/(int value, const Mark& mark);
      
    };
    
-   // student helper function prototypes go here
-
-   std::ostream& display(const Mark& obj , char displayType , std::ostream& os = std::cout);
-
+   std::ostream& display(const Mark& obj , char displayType , std::ostream& os = std::cout);   
    // os stream insertion overload
    std::ostream& operator<<(std::ostream& os, const Mark& mark);
    // os stream extraction overload
    std::istream& operator>>(std::istream& is, Mark& mark);
+   // File extraction overload
+   std::ifstream& operator>>(std::ifstream& is, Mark& mark);
+   
+   // student helper function prototypes go here
+   double operator+(double value, const Mark& mark);
+   int operator+(int value, const Mark& mark);
+   double operator-(double value, const Mark& mark);
+   int operator-(int value, const Mark& mark);
+
+   
+   
 }
 
 #endif // !SENECA_MARK_H
