@@ -117,39 +117,40 @@ namespace seneca {
 
    // student helper function implementations go here
 
-   std::ostream& Mark::display(std::ostream& os = std::cout) const { 
+   std::ostream& Mark::display(std::ostream& os) const { 
       if(!isValid() && !(*this)){
          os << (m_type == GRADE) ? "**" :"***";
       }else {
          switch (m_type)
          {
-         case GPA:
+         case GPA: {
             double value = double(*this);
             int whole = int(value);
             int fraction = (value - whole) * 10;
             char pre = (whole >= 10 ? '\0' : '0');
             os << pre << whole << '.' << fraction;
             break;
-         
-         case MARK:
+         }
+         case MARK: {
             int val = int(*this);
-               if (val < 10) {
-                  os << "__" << val;
-               } else if (val < 100) {
-                  os << "_" << val;
-               } else {
-                  os << val;
-               }
+            if (val < 10) {
+               os << "__" << val;
+            } else if (val < 100) {
+               os << "_" << val;
+            } else {
+               os << val;
+            }
             break;
-
-         case GRADE:
+         }
+         case GRADE: {
             const char* grade = operator const char *();
             os << grade;
             if(grade[1] == '\0'){
                os << "  ";
             }
             os << " ";
-         break;
+            break;
+         }
          default:
             break;
          }
@@ -158,7 +159,7 @@ namespace seneca {
       }
    }
 
-   std::ostream& display(const Mark& mark , char type , std::ostream& os = std::cout){
+   std::ostream& display(const Mark& mark , char type , std::ostream& os){
       Mark temp = mark;
       temp = MARK;
       temp.display(os);

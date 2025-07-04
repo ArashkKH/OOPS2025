@@ -130,11 +130,8 @@ namespace seneca {
 
 
       // display and friends done by students go here 
-
-      void display() const;
-
       
-      std::ostream& display(std::ostream& arg = std::cout) const;
+      std::ostream& display(std::ostream& os = std::cout) const;
 
       friend double operator/(double value, const Mark& mark);
       friend int operator/(int value, const Mark& mark);
