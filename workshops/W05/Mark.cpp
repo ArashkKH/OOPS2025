@@ -124,10 +124,12 @@ namespace seneca {
          switch (m_type)
          {
          case GPA: {
-            double value = double(*this);
-            int whole = int(value);
-            int fraction = int((value - whole) * 10);
-            // char pre = (whole >= 10 ? '\0' : '0');
+            double gpa = double(*this);
+            int whole = int(gpa);
+            int fraction = int((gpa - whole) * 10 + 0.5); 
+
+            if (whole < 10) os << ' ';
+            os << whole << '.' << fraction;
             os << whole << '.' << fraction;
             break;
          }
@@ -145,10 +147,11 @@ namespace seneca {
          case GRADE: {
             const char* grade = operator const char *();
             os << grade;
-            if(grade[1] == '\0'){
-               os << "  ";
-            }
+         if (grade[1] == '\0') {
+            os << "  "; 
+         } else {
             os << " ";
+         }
             break;
          }
          default:
@@ -214,10 +217,10 @@ namespace seneca {
 
       if (is >> value) {
          if (is.get() == ',') {
-               if (is >> type) {
+            if (is >> type) {
                   mark = value;
-                  mark = type; 
-               }
+                  mark = type;
+            }
          }
       }
 
