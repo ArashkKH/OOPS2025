@@ -14,7 +14,7 @@
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #include <iostream>
-#include <cmath> // for round function
+#include <cmath> //used ai help
 #include "Mark.h"
 using namespace std;
 
@@ -125,7 +125,7 @@ namespace seneca {
             int whole = int(gpa);
             int fraction = int((gpa - whole) * 10 + 0.5);
 
-            if (whole < 10) os << ' ';
+            if (whole < 10) os << '0';
             os << whole << '.' << fraction;
             break;
          }
