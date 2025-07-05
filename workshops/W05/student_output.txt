@@ -1,132 +1,142 @@
-Script started on Fri 04 Jul 2025 10:49:26 PM EDT
-==199977== Memcheck, a memory error detector
-==199977== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==199977== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==199977== Command: ws.exe
-==199977== 
+Script started on Fri 04 Jul 2025 11:10:19 PM EDT
+==203011== Memcheck, a memory error detector
+==203011== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==203011== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==203011== Command: ws.exe
+==203011== 
 *** - *** - **
 ==============
-__3 - 0.1 - F   
+__3 -  0.10.1 - F  
 ==============
-__7 - 0.2 - F   
+__7 -  0.30.3 - F  
 ==============
-_11 - 0.4 - F   
+_11 -  0.40.4 - F  
 ==============
-_15 - 0.6 - F   
+_15 -  0.60.6 - F  
 ==============
-_19 - 0.7 - F   
+_19 -  0.80.8 - F  
 ==============
-_23 - 0.9 - F   
+_23 -  0.90.9 - F  
 ==============
-_27 - 1.0 - F   
+_27 -  1.11.1 - F  
 ==============
-_31 - 1.2 - F   
+_31 -  1.21.2 - F  
 ==============
-_35 - 1.4 - F   
+_35 -  1.41.4 - F  
 ==============
-_39 - 1.5 - F   
+_39 -  1.61.6 - F  
 ==============
-_43 - 1.7 - F   
+_43 -  1.71.7 - F  
 ==============
-_47 - 1.8 - F   
+_47 -  1.91.9 - F  
 ==============
-_51 - 2.0 - D   
+_51 -  2.02.0 - D  
 ==============
-_55 - 2.2 - D+ 
+_55 -  2.22.2 - D+ 
 ==============
-_59 - 2.3 - D+ 
+_59 -  2.42.4 - D+ 
 ==============
-_63 - 2.5 - C   
+_63 -  2.52.5 - C  
 ==============
-_67 - 2.6 - C+ 
+_67 -  2.72.7 - C+ 
 ==============
-_71 - 2.8 - B   
+_71 -  2.82.8 - B  
 ==============
-_75 - 3.0 - B+ 
+_75 -  3.03.0 - B+ 
 ==============
-_79 - 3.1 - B+ 
+_79 -  3.23.2 - B+ 
 ==============
-_83 - 3.3 - A   
+_83 -  3.33.3 - A  
 ==============
-_87 - 3.4 - A   
+_87 -  3.53.5 - A  
 ==============
-_91 - 3.6 - A+ 
+_91 -  3.63.6 - A+ 
 ==============
-_95 - 3.8 - A+ 
+_95 -  3.83.8 - A+ 
 ==============
-_99 - 3.9 - A+ 
+_99 -  3.103.10 - A+ 
 ==============
 *** - *** - **
 ==============
 _47
-_47: F   
-_47: 1.8
+_47: F  
+_47:  1.91.9
 ==============
 _62
-_62: C   
-_62: 2.4
+_62: C  
+_62:  2.52.5
 ==============
 _77
 _77: B+ 
-_77: 3.0
+_77:  3.13.1
 ==============
 _92
 _92: A+ 
-_92: 3.6
+_92:  3.73.7
 ==============
-_47: F   , 1.8
+_47: F  ,  1.91.9
 ===============
-_62: C   , 2.4
+_62: C  ,  2.52.5
 ===============
-_77: B+ , 3.0
+_77: B+ ,  3.13.1
 ===============
-_92: A+ , 3.6
+_92: A+ ,  3.73.7
 ===============
 Please enter the mark:
+> abc
+Invalid integer, try again.
+> -1
+Invalid mark. Enter a value between 0 and 100.
+> 101
+Invalid mark. Enter a value between 0 and 100.
+> 67.8
+Invalid trailing characters. Please enter only an integer.
+> 67abc
+Invalid trailing characters. Please enter only an integer.
 > 67
 You entered: _67
 A+ 
-D   
-0.5
+D  
+ 0.50.5
 _86
 _62
-0.6
+ 0.60.6
 _39
-F   
+F  
 _40
-1.2
-3.5
-F   
-3.5
+ 1.31.3
+ 3.63.6
+F  
+ 3.53.5
 A+ 
 _97
-0.2
-1.8
+ 0.20.2
+ 1.91.9
 _47
 __7
 C+ 
-A   
+A  
 D+ 
-0.7
-0.8
+ 0.70.7
+ 0.90.9
 _99
 _35
 _35
-2.7
-F   
+ 2.82.8
+F  
 double: 23.1
    int: 98
 double: 98.7
    int: 68
 double: 3.3
    int: 3
-==199977== 
-==199977== HEAP SUMMARY:
-==199977==     in use at exit: 0 bytes in 0 blocks
-==199977==   total heap usage: 3 allocs, 3 frees, 81,464 bytes allocated
-==199977== 
-==199977== All heap blocks were freed -- no leaks are possible
-==199977== 
-==199977== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==203011== 
+==203011== HEAP SUMMARY:
+==203011==     in use at exit: 0 bytes in 0 blocks
+==203011==   total heap usage: 3 allocs, 3 frees, 81,464 bytes allocated
+==203011== 
+==203011== All heap blocks were freed -- no leaks are possible
+==203011== 
+==203011== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Fri 04 Jul 2025 10:49:40 PM EDT
+Script done on Fri 04 Jul 2025 11:11:03 PM EDT
