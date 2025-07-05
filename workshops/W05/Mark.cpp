@@ -17,7 +17,6 @@
 #include <cmath> //used ai help
 #include "Mark.h"
 using namespace std;
-
 namespace seneca {
    bool Mark::isValid()const {
       return  (m_value >= 0 && m_value <= 100);
@@ -125,7 +124,7 @@ namespace seneca {
             int whole = int(gpa);
             int fraction = int((gpa - whole) * 10 + 0.5);
 
-            if (whole < 10) os << '0';
+            // if (whole < 10) os << '0';
             os << whole << '.' << fraction;
             break;
          }
