@@ -17,10 +17,12 @@
 #include <cmath> // for round function
 #include "Mark.h"
 using namespace std;
+
 namespace seneca {
    bool Mark::isValid()const {
       return  (m_value >= 0 && m_value <= 100);
    }
+
    Mark::Mark(int value, char type) {
       *this = type;
       m_value = double(value);
@@ -45,7 +47,7 @@ namespace seneca {
       return Mark(*this) += M;
    }
 
-   Mark Mark::operator-(const Mark& M)const {
+   Mark Mark::operator-(const Mark& M) const {
       return Mark(*this) -= M;
    }
 
@@ -82,12 +84,11 @@ namespace seneca {
       }
       return value;
    }
+
    Mark::operator bool() const {
       return isValid();
    }
 
-
-   // returns the GPA not the m_value!!!
    Mark::operator double() const {
       double gpa = 0;
       if (!isValid()) gpa = -1;
@@ -96,12 +97,10 @@ namespace seneca {
    }
 
    Mark::operator const char* () const {
-      // removes the constantness of m_grade!
-      // You will learn this at the end of the semester.
       char* grade = const_cast<char*>(m_grade);
-
       int value = int(*this);
       grade[1] = grade[2] = '\0';
+
       if (value < 0 || value > 100) grade[0] = 'X';
       else if (value >= 90) grade[0] = 'A', grade[1] = '+';
       else if (value >= 80) grade[0] = 'A';
@@ -112,61 +111,50 @@ namespace seneca {
       else if (value >= 55) grade[0] = 'D', grade[1] = '+';
       else if (value >= 50) grade[0] = 'D';
       else grade[0] = 'F';
+
       return m_grade;
    }
 
-   // student helper function implementations go here
-
-   std::ostream& Mark::display(std::ostream& os) const { 
-      if(!isValid() && !(*this)){
+   std::ostream& Mark::display(std::ostream& os) const {
+      if (!isValid() && !(*this)) {
          os << ((m_type == GRADE) ? "**" : "***");
-      }else {
-         switch (m_type)
-         {
+      } else {
+         switch (m_type) {
          case GPA: {
             double gpa = double(*this);
             int whole = int(gpa);
-            int fraction = int((gpa - whole) * 10 + 0.5); 
+            int fraction = int((gpa - whole) * 10 + 0.5);
 
             if (whole < 10) os << ' ';
-            os << whole << '.' << fraction;
             os << whole << '.' << fraction;
             break;
          }
          case MARK: {
             int val = int(*this);
-            if (val < 10) {
-               os << "__" << val;
-            } else if (val < 100) {
-               os << "_" << val;
-            } else {
-               os << val;
-            }
+            if (val < 10) os << "__" << val;
+            else if (val < 100) os << '_' << val;
+            else os << val;
             break;
          }
          case GRADE: {
             const char* grade = operator const char *();
             os << grade;
-         if (grade[1] == '\0') {
-            os << "  "; 
-         } else {
-            os << " ";
-         }
+            if (grade[1] == '\0') os << "  ";
+            else os << ' ';
             break;
          }
          default:
             break;
          }
-
       }
       return os;
    }
 
-   std::ostream& display(const Mark& mark , char type , std::ostream& os){
+   std::ostream& display(const Mark& mark, char type, std::ostream& os) {
       Mark temp = mark;
       temp = MARK;
       temp.display(os);
-      if(type != MARK){
+      if (type != MARK) {
          os << ": ";
          temp = type;
          temp.display(os);
@@ -174,68 +162,61 @@ namespace seneca {
       return os;
    }
 
-   std::ostream& operator<<(std::ostream& os, const Mark& mark){
-        return mark.display(os);
+   std::ostream& operator<<(std::ostream& os, const Mark& mark) {
+      return mark.display(os);
    }
 
-   std::istream& operator>>(std::istream& is, Mark& mark){
+   std::istream& operator>>(std::istream& is, Mark& mark) {
       int temp;
       char next;
-
       bool done = false;
 
-      // I used AI help on the implementation of this function from line 184 to 206
       while (!done) {
          if (!(is >> temp)) {
-               cout << "Invalid integer, try again.\n> ";
-               is.clear();
+            cout << "Invalid integer, try again.\n> ";
+            is.clear();
+            is.ignore(1000, '\n');
+         } else {
+            next = is.get();
+            if (next != '\n') {
+               cout << "Invalid trailing characters. Please enter only an integer.\n> ";
                is.ignore(1000, '\n');
-         }
-         else {
-               next = is.get();
-               if (next != '\n') {
-                  cout << "Invalid trailing characters. Please enter only an integer.\n> ";
-                  is.ignore(1000, '\n');
-               }
-               else if (temp < 0 || temp > 100) {
-                  cout << "Invalid mark. Enter a value between 0 and 100.\n> ";
-               }
-               else {
-                  mark = temp;
-                  mark = MARK;
-                  done = true;
-               }
+            } else if (temp < 0 || temp > 100) {
+               cout << "Invalid mark. Enter a value between 0 and 100.\n> ";
+            } else {
+               mark = temp;
+               mark = MARK;
+               done = true;
+            }
          }
       }
-
       return is;
    }
 
    std::ifstream& operator>>(std::ifstream& is, Mark& mark) {
       int value;
       char type;
-
       if (is >> value) {
          if (is.get() == ',') {
             if (is >> type) {
-                  mark = value;
-                  mark = type;
+               mark = value;
+               mark = type;
             }
          }
       }
-
       return is;
    }
 
    double operator+(double value, const Mark& mark) {
-      return value + double(mark);  
+      return value + double(mark);
    }
 
    int operator+(int value, const Mark& mark) {
       return value + int(mark);
    }
+
    double operator-(double value, const Mark& mark) {
-      return value - double(mark);  
+      return value - double(mark);
    }
 
    int operator-(int value, const Mark& mark) {
@@ -243,11 +224,10 @@ namespace seneca {
    }
 
    double operator/(double value, const Mark& mark) {
-      return value / mark.m_value; 
+      return value / mark.m_value;
    }
 
    int operator/(int value, const Mark& mark) {
       return value / int(mark.m_value + 0.5);
    }
 }
-
