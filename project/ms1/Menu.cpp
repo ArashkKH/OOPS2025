@@ -34,7 +34,7 @@ MenuItem::MenuItem(){
 }
 
 MenuItem::MenuItem(const char* content ,const  int indent ,const int indentSize ,const int row){
-    if(!content || ut.isspace(content) || indent > 4 || indentSize > 4 || row > MaximumNumberOfMenuItems){
+    if(!content || ut.isspace(content) || indent > 4 || indentSize > 4 || size_t(row) > MaximumNumberOfMenuItems){
         setSafe();
     }else{
         m_content = new char[ut.strlen(content) + 1];
