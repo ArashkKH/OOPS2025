@@ -62,9 +62,9 @@ ostream& MenuItem::display(ostream& os) const{
         }
 
         if(m_row >= 0){
-            if (m_indent > 0 || m_indentSize > 0){
-                os << ' ';
-            }
+            // if (m_indent > 0 || m_indentSize > 0){
+            //     os << ' ';
+            // }
             os << m_row << "- ";
         }
         
