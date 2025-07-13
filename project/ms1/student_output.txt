@@ -1,33 +1,33 @@
-Script started on Sun 13 Jul 2025 12:25:35 AM EDT
-==236403== Memcheck, a memory error detector
-==236403== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==236403== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==236403== Command: ms.exe
-==236403== 
+Script started on Sun 13 Jul 2025 12:36:23 AM EDT
+==238099== Memcheck, a memory error detector
+==238099== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==238099== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==238099== Command: ms.exe
+==238099== 
 ??????????
 This is an invalid MenuItem
 The Menu Item
-   0- The Menu Item
-       1- The Menu Item
-             2- The Menu Item
+  0- The Menu Item
+      1- The Menu Item
+            2- The Menu Item
 ??????????
- 4- The Menu Item
-   5- The Menu Item
-       6- The Menu Item
-             7- The Menu Item
+4- The Menu Item
+  5- The Menu Item
+      6- The Menu Item
+            7- The Menu Item
 ??????????
- 9- The Menu Item
-   10- The Menu Item
-       11- The Menu Item
-             12- The Menu Item
+9- The Menu Item
+  10- The Menu Item
+      11- The Menu Item
+            12- The Menu Item
 ??????????
-==236403== 
-==236403== HEAP SUMMARY:
-==236403==     in use at exit: 0 bytes in 0 blocks
-==236403==   total heap usage: 13 allocs, 13 frees, 72,944 bytes allocated
-==236403== 
-==236403== All heap blocks were freed -- no leaks are possible
-==236403== 
-==236403== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==238099== 
+==238099== HEAP SUMMARY:
+==238099==     in use at exit: 0 bytes in 0 blocks
+==238099==   total heap usage: 13 allocs, 13 frees, 72,944 bytes allocated
+==238099== 
+==238099== All heap blocks were freed -- no leaks are possible
+==238099== 
+==238099== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Sun 13 Jul 2025 12:25:36 AM EDT
+Script done on Sun 13 Jul 2025 12:36:24 AM EDT
