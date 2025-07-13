@@ -28,7 +28,7 @@ and include the citation of that code.
 // <<<--- END of citation CSTDDEF__CITE
 
 namespace seneca {
-   const size_t MaximumNumberOfMenuItems = 20u;
+   const int MaximumNumberOfMenuItems = 20;
 }
 
 #endif // !SENECA_CONSTANTS_H

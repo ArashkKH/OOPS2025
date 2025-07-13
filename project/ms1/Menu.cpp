@@ -34,7 +34,7 @@ MenuItem::MenuItem(){
 }
 
 MenuItem::MenuItem(const char* content ,const  int indent ,const int indentSize ,const int row){
-    if(!content || ut.isspace(content) || indent > 4 || indentSize > 4 || size_t(row) > MaximumNumberOfMenuItems){
+    if(!content || ut.isspace(content) || indent > 4 || indentSize > 4 || row > MaximumNumberOfMenuItems){
         setSafe();
     }else{
         m_content = new char[ut.strlen(content) + 1];
@@ -52,7 +52,7 @@ MenuItem::~MenuItem(){
 }
 
 ostream& MenuItem::display(ostream& os) const{
-    if(m_content != nullptr){
+    if(m_content != nullptr || !m_isSafeEmpty){
         for (int i = 0; i < m_indent; i++)
         {
             for (int j = 0; j < m_indentSize; j++)
