@@ -57,10 +57,10 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "*.erd": "json",
-    "*.vuerd": "json",
     "*.ascx": "html",
     "*.mdx": "markdown",
+    "*.erd": "json",
+    "*.vuerd": "json",
     "ostream": "cpp",
     "array": "cpp",
     "atomic": "cpp",
@@ -111,6 +111,8 @@
     "typeinfo": "cpp",
     "variant": "cpp",
     "cstring": "cpp",
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "sstream": "cpp"
   }
 }

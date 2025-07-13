@@ -13,7 +13,11 @@ int main(){
     Journal lunch("Lunch" , 15.75);
     lunch.display();
 
-    
+    cout << "Using overloaded operators" << endl;
 
+    Journal overloaded;
+
+    cin >> overloaded;
+    cout << overloaded;
 }
 

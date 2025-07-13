@@ -4,7 +4,7 @@
 using namespace std;
 
 void Journal::display() const{
-    cout << description << " - $" << amount << endlr;
+    cout << description << " - $" << amount << endl;
 }
 void Journal::read(){
     cout << "Enter Description: ";
@@ -21,6 +21,18 @@ Journal::Journal(){
 Journal::Journal(const char* entryText, double entryAmount){
     strcpy(description, entryText);
     amount = entryAmount;
+}
+
+ostream& operator<<(ostream& os , const Journal& j){
+    cout << "//Displaying data from user using overload operator!" << endl;
+    j.display();
+    return os;
+}
+
+istream& operator>>(istream& is , Journal& j){
+    cout << "//Gettin data from user using overload operator!" << endl;
+    j.read();
+    return is;
 }
 
 
