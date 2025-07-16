@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/inheritance",
-      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/inheritance/build/Debug/outDebug",
+      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/functionsInClassHierarchy/extra",
+      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/functionsInClassHierarchy/extra/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
