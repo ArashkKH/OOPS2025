@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/virtualFunctions",
-      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/virtualFunctions/build/Debug/outDebug",
+      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W07",
+      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/workshops/W07/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
