@@ -12,7 +12,7 @@ class Item{
         void deleteItemName();
     public:
         Item();
-        Item(const char* title);
+        Item(char* title);
         virtual void display(ostream& os = cout) const = 0;
         virtual ~Item();       
 };
@@ -22,8 +22,8 @@ class Book : public Item{
         int m_pageCount;
     public:
         Book();
-        Book(const char* title , int pages);
-
+        Book( char* title , int pages);
+        ~Book() override;
         void display(ostream& os = cout) const override;
 };
 
@@ -31,7 +31,8 @@ class DVD : public Item {
         int m_duration;
     public:
         DVD();
-        DVD(const char* title , int duration);
+        DVD(char* title , int duration);
+        ~DVD() override;
         void display(ostream& os = cout) const override;
 };
 

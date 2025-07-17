@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/functionsInClassHierarchy/extra",
-      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/functionsInClassHierarchy/extra/build/Debug/outDebug",
+      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/virtualFunctions",
+      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/sandbox/textBook/virtualFunctions/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
