@@ -42,6 +42,8 @@ namespace seneca{
 
             ~Professor();
     };
+    std::ostream& operator<<( std::ostream& ostr, const Professor& P );
+    std::istream& operator>>( std::istream& istr, Professor& P );
 }
 #endif // PROFESSOR_H
 

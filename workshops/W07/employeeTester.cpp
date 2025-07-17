@@ -1,10 +1,13 @@
+#define MATRIX
+#if defined(MATRIX)
 #include <iostream>
 #include <fstream>
 #include "Employee.h"
 using namespace std;
 using namespace seneca;
-
 void prnEmp();
+
+
 
 int main() {
    Employee P("Edna Krabappel", 11222, 76543.0);
@@ -32,3 +35,5 @@ void prnEmp() {
       if (file) cout << P << endl;
    }
 }
+
+#endif // MATRIX
