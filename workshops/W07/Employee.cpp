@@ -2,7 +2,6 @@
 // OOP244 Workshop 7 lab: Employee
 //
 // File  Employee.cpp
-// Version 1.0
 // Author   Fardad Soleimanloo
 // Description
 //
@@ -68,3 +67,4 @@ namespace seneca {
       return E.read( istr );
    }
 }
+

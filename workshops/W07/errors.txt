@@ -1,0 +1,9 @@
+In file included from Professor.h:17:0,
+                 from Professor.cpp:14:
+Employee.h: In member function ‘double seneca::Professor::devPay() const’:
+Employee.h:21:23: error: ‘double seneca::Employee::m_salary’ is private
+       double m_salary{};
+                       ^
+Professor.cpp:25:17: error: within this context
+         return (m_salary / 100) * m_sectionQty;
+                 ^

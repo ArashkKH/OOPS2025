@@ -18,8 +18,8 @@ namespace seneca{
    class Employee {
       char *m_name{};
       size_t m_employeeNo{};
-   protected:
       double m_salary{};
+   protected:
       double salary()const;
    public:
       Employee() = default;
