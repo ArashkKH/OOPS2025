@@ -1,4 +1,4 @@
-#define MATRIX
+// #define MATRIX
 #if defined(MATRIX)
 #include <iostream>
 #include <fstream>

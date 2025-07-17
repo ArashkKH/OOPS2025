@@ -25,7 +25,6 @@ using std::cin;
 
 namespace seneca{
     class Professor : public Employee {
-        char *m_name{};
         size_t m_employeeNo{};
         char* m_subjectName{};
         int m_sectionQty{};
@@ -39,9 +38,8 @@ namespace seneca{
             istream& read(istream& istr = cin);             //call employee read + the prof member values
             ostream& write(ostream& ostr = cout) const;     //https://github.com/Seneca-244200/OOP-Workshops/tree/main/WS07#ostream-writeostream-ostr--cout-const
             ostream& title(ostream& ostr = cout) const;     //calling employees title function + " Teaching Subject | Sec # | $Dev Pay |"
-
-            ~Professor();
     };
+    
     std::ostream& operator<<( std::ostream& ostr, const Professor& P );
     std::istream& operator>>( std::istream& istr, Professor& P );
 }

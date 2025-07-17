@@ -16,7 +16,7 @@
 namespace seneca {
 
     Professor::Professor(const char* name , const char* subjectName , const int sectionQty , const size_t empNumber , const double salary)
-        : m_name(ut.alocpy(name))
+        : Employee(name, empNumber, salary)
         , m_subjectName(ut.alocpy(subjectName))
         , m_sectionQty(sectionQty)
     {}
@@ -40,11 +40,11 @@ namespace seneca {
             ut.strcpy(subjectOut, m_subjectName, 20);  // copy max 20 characters
         }
 
-        os << ' ';              
+        // os << ' ';              
         Employee::write(os);    
 
         os.setf(std::ios::left);
-        os.width(20);
+        os.width(21);
         os << subjectOut << " | ";
 
         os.unsetf(std::ios::left);
@@ -56,12 +56,14 @@ namespace seneca {
         os.precision(2);
         os.width(8);
         os << devPay() << " |";
+        os.unsetf(std::ios::right);
+
         return os;
     }
 
     std::ostream& Professor::title(std::ostream& os) const {
         Employee::title(os);
-        os << " Teaching Subject | Sec # | $Dev Pay |";
+        os << " Teaching Subject     | Sec # | $Dev Pay |";
         return os;
     }
 

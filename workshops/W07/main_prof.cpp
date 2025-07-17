@@ -10,7 +10,8 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
-
+// #define MATRIX
+#if defined(MATRIX)
 #include <iostream>
 #include <fstream>
 #include "Professor.h"
@@ -45,3 +46,4 @@ void prnProf() {
       if (file) cout << P << endl;
    }
 }
+#endif
