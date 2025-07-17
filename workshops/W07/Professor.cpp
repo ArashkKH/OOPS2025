@@ -21,8 +21,8 @@ namespace seneca {
         , m_sectionQty(sectionQty)
     {}
 
-    double Professor::devPay() const{
-        return (m_salary / 100) * m_sectionQty;
+    double Professor::devPay() const {
+        return (salary() / 100.0) * m_sectionQty;
     }
 
     istream& Professor::read(istream& istr){
