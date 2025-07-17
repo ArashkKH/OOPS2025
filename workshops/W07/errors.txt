@@ -1,9 +1,7 @@
-In file included from Professor.h:17:0,
-                 from Professor.cpp:14:
-Employee.h: In member function ‘double seneca::Professor::devPay() const’:
-Employee.h:21:23: error: ‘double seneca::Employee::m_salary’ is private
-       double m_salary{};
-                       ^
-Professor.cpp:25:17: error: within this context
-         return (m_salary / 100) * m_sectionQty;
-                 ^
+/tmp/ccYy1WOE.o: In function `main':
+main_prof.cpp:(.text+0x14c): undefined reference to `seneca::Professor::~Professor()'
+main_prof.cpp:(.text+0x15f): undefined reference to `seneca::Professor::~Professor()'
+/tmp/ccYy1WOE.o: In function `prnProf()':
+main_prof.cpp:(.text+0x28c): undefined reference to `seneca::Professor::~Professor()'
+main_prof.cpp:(.text+0x2af): undefined reference to `seneca::Professor::~Professor()'
+collect2: error: ld returned 1 exit status
