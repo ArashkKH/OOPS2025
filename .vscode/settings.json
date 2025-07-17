@@ -113,6 +113,7 @@
     "cstring": "cpp",
     "fstream": "cpp",
     "iomanip": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "cstdarg": "cpp"
   }
 }
