@@ -31,6 +31,8 @@ namespace seneca{
 
         public:
             Professor() = default;
+            ~Professor();
+
             Professor(const char* name , const char* subjectName , const int sectionQty , const size_t empNumber , const double salary);
 
             // Methods 

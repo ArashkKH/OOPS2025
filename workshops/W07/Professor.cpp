@@ -21,6 +21,11 @@ namespace seneca {
         , m_sectionQty(sectionQty)
     {}
 
+    Professor::~Professor(){
+        delete[] m_subjectName;
+        m_subjectName = nullptr;
+    }
+
     double Professor::devPay() const {
         return (salary() / 100.0) * m_sectionQty;
     }
@@ -31,6 +36,7 @@ namespace seneca {
         char buffer[1024];
         istr.getline(buffer, 1024, ',');
         ut.alocpy(m_subjectName, buffer);
+
         return istr >> m_sectionQty;
     }
 
