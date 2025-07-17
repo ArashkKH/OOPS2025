@@ -40,11 +40,11 @@ namespace seneca {
             ut.strcpy(subjectOut, m_subjectName, 20);  // copy max 20 characters
         }
 
-        // os << ' ';              
         Employee::write(os);    
+        os << ' ';              
 
         os.setf(std::ios::left);
-        os.width(21);
+        os.width(20);
         os << subjectOut << " | ";
 
         os.unsetf(std::ios::left);
