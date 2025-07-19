@@ -17,34 +17,16 @@ and include the citation of that code.
 ----------------------------------------------------------------------------
 */
 
-#if !defined(MENU__H)
+#ifndef MENU__H
 #define MENU__H
 #include <iostream>
+#include "constants.h"
 
 using namespace std;
 
 namespace seneca{
 
-
-    
-    class Menu{
-        
-        int m_ident;
-        int m_indentSize;
-        int m_menuItemQty;
-        
-        MenuItem m_title;
-        MenuItem m_exit;
-        MenuItem m_entryPrompt;
-
-        MenuItem* m_menuOptions[MaximumNumberOfMenuItems];
-
-        public:
-            Menu(const char* title , const char* exitOption , int indent = 0 , int indentSize = 3);
-            
-
-    };
-    class MenuItem{
+        class MenuItem{
         char*   m_content;
         int     m_indent;
         int     m_indentSize;
@@ -68,9 +50,41 @@ namespace seneca{
 
         ostream& display(ostream& ostr = cout) const;
 
-        friend Menu;
+        /**
+         * based on the need of declaing in order there was some difficulties on
+         * classes trying to recognize each other,
+         * the orther and the use of keywork CLASS below was suggested by AI
+         */
+
+        friend class Menu;
+    };
+    
+    class Menu{
+        
+        int m_indent;
+        int m_indentSize;
+        int m_menuItemQty;
+        
+        MenuItem m_title;
+        MenuItem m_exit;
+        MenuItem m_entryPrompt;
+
+        MenuItem* m_menuOptions[MaximumNumberOfMenuItems];
+
+        public:
+            Menu(const char* title , const char* exitOption = "Exit" , int indent = 0 , int indentSize = 3);
+            Menu& operator<<(const char* content);
+            ~Menu();
+
+            // Rule of Three
+            Menu(const Menu&) = delete;
+            Menu& operator=(const Menu&) = delete;
+
+        
+            size_t select() const;
     };
 
+    size_t operator<<(ostream& ostr , const Menu& m);
 
 
 };

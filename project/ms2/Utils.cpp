@@ -14,6 +14,8 @@
 ***********************************************************************/
 #include <iostream>
 #include "Utils.h"
+#include <cstring>
+
 using namespace std;
 namespace seneca {
    Utils ut;
@@ -54,5 +56,48 @@ namespace seneca {
       }
       return cstring && *cstring == 0;
    }
+
+
+   // getInt function Below was implemented with help of AI
+
+   int Utils::getInt() {
+        int value;
+        char newline = '\0';
+
+        while (true) {
+            std::cin >> value;
+
+            if (!std::cin) {
+                std::cout << "Invalid integer: ";
+                std::cin.clear();                         
+                std::cin.ignore(10000, '\n');             
+                continue;
+            }
+
+            // Check for trailing characters
+            newline = std::cin.get();
+            if (newline != '\n') {
+                std::cout << "Only an integer please: ";
+                std::cin.ignore(10000, '\n');              
+                continue;
+            }
+
+            return value;
+        }
+    }
+
+   int Utils::getInt(int min , int max){
+      int value;
+      while (true) {
+         value = getInt();
+
+         if (value < min || value > max) {
+               std::cout << "Invalid value: [" << min << " <= value <= " << max << "], try again: ";
+         } else {
+               return value;
+         }
+      }
+   }
+
 
 }

@@ -56,3 +56,12 @@ Milestone 2
  0- Exit
 > 0
 Have a good day!
+
+
+> 1
+> 0
+> 2
+> 2
+> 0
+> 0
+> 0
