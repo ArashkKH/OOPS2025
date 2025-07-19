@@ -31,7 +31,7 @@ namespace seneca{
         int     m_indent;
         int     m_indentSize;
         int     m_row;  
-        bool    m_isSafeEmpty;
+        bool    m_isSafeEmpty = false;
         
         // utils
         
