@@ -16,6 +16,7 @@
 #define SENECA_LABELEDSHAPE_H
 
 #include <iostream>
+#include "LblShape.h"
 #include "Shape.h"
 
 using std::istream;
