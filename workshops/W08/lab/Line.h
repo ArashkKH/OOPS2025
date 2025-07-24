@@ -32,6 +32,9 @@ namespace seneca {
       void draw(ostream& os) const override;
       // Gets specifications of the line (label and length) from input
       void getSpecs(istream& is) override;
+
+      Line(const Line& obj) = delete;
+      Line& operator=(const Line& obj) = delete;
    };
 
 }

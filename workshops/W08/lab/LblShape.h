@@ -33,7 +33,7 @@ namespace seneca {
       LblShape(const char* string);
       // Copy constructor and assignment operator are deleted to prevent copying
       LblShape(const LblShape& obj) = delete;
-      LblShape& operator=(const LblShape obj) = delete;
+      LblShape& operator=(const LblShape& obj) = delete;
       // Reads label specifications from input stream
       void getSpecs(istream& is) override;
       // Destructor to release dynamically allocated memory
