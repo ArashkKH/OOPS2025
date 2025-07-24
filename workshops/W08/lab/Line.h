@@ -20,7 +20,7 @@
 
 namespace seneca {
 
-   class Line : LblShape{
+   class Line : public LblShape{
        // Length of the line
       int m_length = 0;
    public:

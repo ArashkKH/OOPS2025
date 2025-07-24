@@ -13,4 +13,18 @@
  *  0.012           2025-07-24      Workshop submission
  ___________________________________________________________ */
 
- 
+#include "Shape.h"
+
+namespace seneca{
+
+    Shape::~Shape() {}
+    std::ostream& operator<<(std::ostream& os, const Shape& shape) {
+        shape.draw(os);
+        return os;
+    }
+    std::istream& operator>>(std::istream& is, Shape& shape) {
+        shape.getSpecs(is);
+        return is;
+    }
+
+}

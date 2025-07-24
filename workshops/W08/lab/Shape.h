@@ -29,11 +29,11 @@ namespace seneca {
       // Virtual destructor to ensure proper cleanup of derived class objects
       virtual ~Shape();
    };
-
    // Operator overload to handle output stream, relies on draw function
    ostream& operator<<(ostream& os , const Shape& shape);
    // Operator overload to handle input stream, relies on getSpecs function
    istream& operator>>(istream& is ,Shape& shape);
+
 }
 
 #endif // !SENECA_SHAPE_H

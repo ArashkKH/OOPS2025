@@ -15,16 +15,12 @@
 #ifndef SENECA_LABELEDSHAPE_H
 #define SENECA_LABELEDSHAPE_H
 
-#include <iostream>
-#include "LblShape.h"
 #include "Shape.h"
-
 using std::istream;
-
 
 namespace seneca {
 
-   class LblShape : Shape{
+   class LblShape : public Shape{
       // Dynamically allocated label for the shape
       char* m_label = nullptr;
    protected:
