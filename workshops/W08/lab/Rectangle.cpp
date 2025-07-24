@@ -32,6 +32,8 @@ namespace seneca{
         is >> m_height;
         is.ignore(1000, '\n');
 
+        std::cout << m_width << " and " << ut.strlen(label())  << std::endl;
+
         if(m_width <= ut.strlen(label())){
             m_width = ut.strlen(label()) + 2;
         }
@@ -60,7 +62,6 @@ namespace seneca{
     }
 
     void Rectangle::drawBorder(ostream& os , int wid) const{
-        std::cout << wid << std::endl;
         os << '+';
         for (int i = 0; i < wid - 2; i++)
         {
