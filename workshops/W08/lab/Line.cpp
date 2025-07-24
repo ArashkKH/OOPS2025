@@ -31,7 +31,7 @@ namespace seneca{
     void Line::getSpecs(istream& is){
         LblShape::getSpecs(is);
         is >> m_length;
-        //is.ignore(1000, '\n'); 
+        is.ignore(1000, '\n'); 
     }
 
     void Line::draw(ostream& os) const{
@@ -44,7 +44,7 @@ namespace seneca{
             {
                 os << "=";
             }
-            os << std::endl;
+            //os << std::endl;
         }
     }
 }

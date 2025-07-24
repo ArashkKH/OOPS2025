@@ -1,9 +1,9 @@
-Script started on Mon 11 Nov 2024 04:59:02 PM EST
-==203185== Memcheck, a memory error detector
-==203185== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==203185== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==203185== Command: ws.exe
-==203185== 
+Script started on Thu 24 Jul 2025 03:33:01 PM EDT
+==133236== Memcheck, a memory error detector
+==133236== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==133236== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==133236== Command: ws.exe
+==133236== 
 Nothing should be printed between these two lines
 ------------------------------------
 ------------------------------------
@@ -75,13 +75,13 @@ line four
 |Step one                                   |
 |                                           |
 +-------------------------------------------+
-==203185== 
-==203185== HEAP SUMMARY:
-==203185==     in use at exit: 0 bytes in 0 blocks
-==203185==   total heap usage: 26 allocs, 26 frees, 81,860 bytes allocated
-==203185== 
-==203185== All heap blocks were freed -- no leaks are possible
-==203185== 
-==203185== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==133236== 
+==133236== HEAP SUMMARY:
+==133236==     in use at exit: 0 bytes in 0 blocks
+==133236==   total heap usage: 26 allocs, 26 frees, 81,860 bytes allocated
+==133236== 
+==133236== All heap blocks were freed -- no leaks are possible
+==133236== 
+==133236== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Mon 11 Nov 2024 04:59:15 PM EST
+Script done on Thu 24 Jul 2025 03:33:15 PM EDT

@@ -20,7 +20,7 @@ using std::istream;
 
 namespace seneca{
     LblShape::LblShape(const char* string){
-        m_label = new char[ut.strlen(string) + 1 ];
+        //m_label = new char[ut.strlen(string) + 1 ];
         ut.alocpy(m_label , string);
     }
 
@@ -28,18 +28,18 @@ namespace seneca{
         char buffer[80];
         is.getline(buffer , 80 , ',');
 
-        m_label = nullptr;
         delete[] m_label;
+        m_label = nullptr;
 
-        m_label = new char[ut.strlen(buffer) + 1];
+        //m_label = new char[ut.strlen(buffer) + 1];
 
         ut.alocpy(m_label , buffer);
         //is.ignore();
     }
 
     LblShape::~LblShape(){
-        m_label = nullptr;
         delete[] m_label;
+        m_label = nullptr;
     }
 
     const char* LblShape::label() const {

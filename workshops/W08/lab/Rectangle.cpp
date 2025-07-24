@@ -45,6 +45,7 @@ namespace seneca{
     void Rectangle::draw(ostream& os) const{
         if(m_width > 0 && m_height > 0){
             drawBorder(os , m_width );
+            os << std::endl;
             
             os<<'|';
             os.width(m_width - 2);
@@ -71,7 +72,7 @@ namespace seneca{
             os << '-';
         }
         os << '+';
-        os << std::endl;
+        //os << std::endl;
     }
     
 }
