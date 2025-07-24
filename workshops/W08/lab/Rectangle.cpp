@@ -32,8 +32,8 @@ namespace seneca{
         is >> m_height;
         is.ignore(1000, '\n');
 
-        if(m_width < ut.strlen(label())){
-            m_width = ut.strlen(label());
+        if(m_width <= ut.strlen(label())){
+            m_width = ut.strlen(label()) + 2;
         }
     }
 
