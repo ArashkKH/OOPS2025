@@ -30,7 +30,11 @@ namespace seneca{
         is >> m_width;
         is.ignore();
         is >> m_height;
-        is.ignore(1000, '\n'); 
+        is.ignore(1000, '\n');
+
+        if(m_width < ut.strlen(label())){
+            m_width = ut.strlen(label());
+        }
     }
 
     void Rectangle::draw(ostream& os) const{
