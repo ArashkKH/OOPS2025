@@ -1,12 +1,52 @@
-/tmp/ccmZbmjM.o: In function `seneca::Shape::Shape()':
-main_prof.cpp:(.text._ZN6seneca5ShapeC2Ev[_ZN6seneca5ShapeC5Ev]+0xf): undefined reference to `vtable for seneca::Shape'
-/tmp/ccDaJOMs.o:(.rodata._ZTVN6seneca8LblShapeE[_ZTVN6seneca8LblShapeE]+0x10): undefined reference to `seneca::Shape::draw(std::ostream&) const'
-/tmp/ccDaJOMs.o:(.rodata._ZTIN6seneca8LblShapeE[_ZTIN6seneca8LblShapeE]+0x10): undefined reference to `typeinfo for seneca::Shape'
-/tmp/ccygdNV9.o: In function `seneca::Line::draw(std::ostream&) const':
-Line.cpp:(.text+0x10d): undefined reference to `seneca::LblShape::label() const'
-Line.cpp:(.text+0x12e): undefined reference to `seneca::LblShape::label() const'
-/tmp/ccRZuPHR.o: In function `seneca::Rectangle::draw(std::ostream&) const':
-Rectangle.cpp:(.text+0x175): undefined reference to `seneca::LblShape::label() const'
-/tmp/cc4TKy4z.o: In function `seneca::Shape::~Shape()':
-Shape.cpp:(.text+0x13): undefined reference to `vtable for seneca::Shape'
-collect2: error: ld returned 1 exit status
+In file included from Rectangle.h:17:0,
+                 from main_prof.cpp:17:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from main_prof.cpp:16:0:
+Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from LblShape.cpp:16:0:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from LblShape.cpp:16:
+Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from Line.h:18:0,
+                 from Line.cpp:15:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from Line.h:18,
+                 from Line.cpp:15:
+Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from Rectangle.h:17:0,
+                 from Rectangle.cpp:15:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from Rectangle.h:17,
+                 from Rectangle.cpp:15:
+Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
