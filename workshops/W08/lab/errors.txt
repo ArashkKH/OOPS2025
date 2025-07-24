@@ -1,0 +1,52 @@
+In file included from Rectangle.h:17:0,
+                 from main_prof.cpp:17:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from main_prof.cpp:16:0:
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from LblShape.cpp:16:0:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from LblShape.cpp:16:
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from Line.h:18:0,
+                 from Line.cpp:15:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from Line.h:18,
+                 from Line.cpp:15:
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
+In file included from Rectangle.h:17:0,
+                 from Rectangle.cpp:15:
+LblShape.h:36:17: error: cannot declare parameter ‘obj’ to be of abstract type ‘seneca::LblShape’
+       LblShape& operator=(const LblShape obj) = delete;
+                 ^
+LblShape.h:23:10: note:   because the following virtual functions are pure within ‘seneca::LblShape’:
+    class LblShape : public Shape{
+          ^
+In file included from LblShape.h:18:0,
+                 from Rectangle.h:17,
+                 from Rectangle.cpp:15:
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+       virtual void draw(ostream& os) const = 0;
+                    ^
