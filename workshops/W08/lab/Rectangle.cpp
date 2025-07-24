@@ -46,7 +46,7 @@ namespace seneca{
             {
                 os << '|';
                 os.unsetf(ios::left);
-                os.width(m_width - 2);
+                os.width(m_width - 1);
                 os.fill(' ');
                 os << '|' << std::endl;
             }

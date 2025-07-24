@@ -34,12 +34,16 @@ namespace seneca{
         m_label = new char[ut.strlen(buffer) + 1];
 
         ut.alocpy(m_label , buffer);
-        is.ignore();
+        //is.ignore();
     }
 
     LblShape::~LblShape(){
         m_label = nullptr;
         delete[] m_label;
+    }
+
+    const char* LblShape::label() const {
+        return m_label;
     }
 
 }
