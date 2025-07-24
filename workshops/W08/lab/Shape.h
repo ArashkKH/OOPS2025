@@ -23,9 +23,9 @@ namespace seneca {
    class Shape {
    public:
       // Pure virtual function to draw the shape, implemented in derived classes
-      virtual void draw(ostream& os) const;
+      virtual void draw(ostream& os) const = 0;
       // Pure virtual function to get specifications of the shape, implemented in derived classes
-      virtual void getSpecs(istream& is);
+      virtual void getSpecs(istream& is) = 0;
       // Virtual destructor to ensure proper cleanup of derived class objects
       virtual ~Shape();
    };
