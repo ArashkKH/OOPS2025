@@ -1,7 +1,0 @@
-/tmp/ccYy1WOE.o: In function `main':
-main_prof.cpp:(.text+0x14c): undefined reference to `seneca::Professor::~Professor()'
-main_prof.cpp:(.text+0x15f): undefined reference to `seneca::Professor::~Professor()'
-/tmp/ccYy1WOE.o: In function `prnProf()':
-main_prof.cpp:(.text+0x28c): undefined reference to `seneca::Professor::~Professor()'
-main_prof.cpp:(.text+0x2af): undefined reference to `seneca::Professor::~Professor()'
-collect2: error: ld returned 1 exit status

@@ -1,0 +1,14 @@
+In line number 11 of your output:
+The output should be:
+| Edna Krabappel  | 011222 |  76543 | OOP345 - Object-Orie |     3 |  2296.29 |
+                                     ^
+But your output is: 
+| Edna Krabappel  | 011222 |  76543 |OOP345 - Object-Orie  |     3 |  2296.29 |
+                                     ^
+
+Unmatched character details:
+The character in column 38 is supposed to be:
+  [Space] ASCII code(32)
+but you printed
+  [O] ASCII code(79)
+
