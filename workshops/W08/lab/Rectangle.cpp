@@ -60,6 +60,7 @@ namespace seneca{
     }
 
     void Rectangle::drawBorder(ostream& os , int wid) const{
+        std::cout << wid << std::endl;
         os << '+';
         for (int i = 0; i < wid - 2; i++)
         {
