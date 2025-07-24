@@ -20,10 +20,14 @@ using std::ostream;
 using std::ios;
 
 namespace seneca{
-    Rectangle::Rectangle(const char* label , int width , int height)
-    : LblShape(label) 
+    Rectangle::Rectangle(const char* string , int width , int height)
+    : LblShape(string) 
     , m_width(width) 
-    , m_height(height){};
+    , m_height(height){
+        if(m_width <= ut.strlen(label())){
+            m_width = ut.strlen(label()) + 2;
+        }
+    };
 
     void Rectangle::getSpecs(istream& is){
         LblShape::getSpecs(is);
@@ -32,7 +36,6 @@ namespace seneca{
         is >> m_height;
         is.ignore(1000, '\n');
 
-        std::cout << m_width << " and " << ut.strlen(label())  << std::endl;
 
         if(m_width <= ut.strlen(label())){
             m_width = ut.strlen(label()) + 2;
