@@ -7,7 +7,7 @@ LblShape.h:23:10: note:   because the following virtual functions are pure withi
     class LblShape : public Shape{
           ^
 In file included from main_prof.cpp:16:0:
-Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
        virtual void draw(ostream& os) const = 0;
                     ^
 In file included from LblShape.cpp:16:0:
@@ -19,7 +19,7 @@ LblShape.h:23:10: note:   because the following virtual functions are pure withi
           ^
 In file included from LblShape.h:18:0,
                  from LblShape.cpp:16:
-Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
        virtual void draw(ostream& os) const = 0;
                     ^
 In file included from Line.h:18:0,
@@ -33,7 +33,7 @@ LblShape.h:23:10: note:   because the following virtual functions are pure withi
 In file included from LblShape.h:18:0,
                  from Line.h:18,
                  from Line.cpp:15:
-Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
        virtual void draw(ostream& os) const = 0;
                     ^
 In file included from Rectangle.h:17:0,
@@ -47,6 +47,6 @@ LblShape.h:23:10: note:   because the following virtual functions are pure withi
 In file included from LblShape.h:18:0,
                  from Rectangle.h:17,
                  from Rectangle.cpp:15:
-Shape.h:26:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
+Shape.h:27:20: note: 	virtual void seneca::Shape::draw(std::ostream&) const
        virtual void draw(ostream& os) const = 0;
                     ^
