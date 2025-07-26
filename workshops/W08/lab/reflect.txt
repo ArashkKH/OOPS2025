@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------------------- #
+#                               Reflection Header                              #
+# ---------------------------------------------------------------------------- #
+
+Author      : Arash kheirollahi
+Seneca SID  : 146731245
+Title       : OOP - Workshop 8 Reflection letter
+Proffessor  : Hong Huang
+
+# ----------------------------------- Body ----------------------------------- #
+
+Workshop expected outcomes:
+    - Define pure virtual functions
+    - Create abstract base classes
+    - Implement behavior using virtual functions
+    - Explain the difference between an abstract base class and a concrete class
+    - Reflect on what you have learned in completing this workshop
+
+Message:
+It's been a while since my last time submitting this course workshop on time and properly, I did have some difficulty following the material and
+keeping up with class. however I took the time i needed ad learned so much on my own and thanks to the material Prof. has left us.
+
+For getting ready for this workshop and gettig comfortable with the concept of virtual and pure virtual functions I have worked a little on the sandbox present in my repository
+(ref to the folder: https://github.com/ArashkKH/OOPS2025/tree/b1bae0bc22b755b54892ce5164b8a696c486dd65/sandbox/textBook/virtualFunctions)
+
+In this workshop I did get into some more problem in case of encountering memory leaks and output buffer  difficulties. for instance the rectangle function would print an extra new
+character whenever it would be called on user input, the problem would be solved with using the input stream -> ignore method to clear the buffer.
+
+I've also got more confortable with defining abstract base classes and making Pure virtual methods defining differnet behaviours for those functions.
+
+-Arash kh
+07/26/2025
