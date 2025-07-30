@@ -64,6 +64,8 @@ namespace seneca {
             default:
                 os << ".....";
                 break;
+            // Ensure a return value in all code paths
+            return os;
             }
         }
 
@@ -109,6 +111,7 @@ namespace seneca {
         default:
             return false;
         }
+        return false;
     }
 
     bool Drink::ordered() const{

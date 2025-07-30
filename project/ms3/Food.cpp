@@ -40,10 +40,14 @@ namespace seneca {
         ut.alocpy(m_customize);
         m_ordered = src.m_ordered;
         m_child = src.m_child;
+
+       return *this;
     }
 
 
-    Food::Food(const Food& src){
+    Food::Food(const Food& src)
+        : Billable(src)
+    {
         *this = src;
     }
 
