@@ -54,5 +54,10 @@ namespace seneca {
         return m_name;
     }
 
+    const double Billable::getPrice() const{
+        return m_price;
+    }
+
+
 }
 

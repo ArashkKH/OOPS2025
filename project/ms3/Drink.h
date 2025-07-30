@@ -19,6 +19,12 @@ and include the citation of that code.
 #if !defined(DRINK_H)
 #define DRINK_H
 
+#include <iostream>
+#include "Billable.h"
+using std::ostream;
+using std::cout;
+using std::ifstream;
+
 
 namespace seneca {
 
@@ -27,9 +33,13 @@ namespace seneca {
             char m_size = '\0';
         public:
             ostream& print(ostream& ostr=cout) const override;
-            
-
+            bool order() override;
+            bool ordered() const override;
+            ifstream& read(ifstream& file);
+            double price() const override;
     };
+
+
 
 
 }

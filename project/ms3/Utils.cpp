@@ -31,8 +31,8 @@ namespace seneca {
       if (src) {
          des = new char[strlen(src) + 1];
          strcpy(des, src);
+         return des;
       }
-      return des;
    }
    char* Utils::strcpy(char* des, const char* src)const {
       int i;
