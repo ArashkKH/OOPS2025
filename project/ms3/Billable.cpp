@@ -28,8 +28,11 @@ namespace seneca {
     }
 
     Billable& Billable::operator=(const Billable& src){
-        ut.alocpy(m_name , src.m_name);
-        m_price = src.m_price;
+        if (this != &src) {
+            ut.alocpy(m_name , src.m_name);
+            m_price = src.m_price;
+        }
+        return *this;
     }
 
     Billable::~Billable(){
@@ -56,6 +59,18 @@ namespace seneca {
 
     const double Billable::getPrice() const{
         return m_price;
+    }
+
+    Billable::operator const char*() const {
+        return m_name;
+    }
+
+    void Billable::name(const char* name) {
+        ut.alocpy(m_name, name);
+    }
+
+    void Billable::price(double value) {
+        m_price = value;
     }
 
 
