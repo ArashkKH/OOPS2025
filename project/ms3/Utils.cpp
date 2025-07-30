@@ -31,8 +31,8 @@ namespace seneca {
       if (src) {
          des = new char[strlen(src) + 1];
          strcpy(des, src);
-         return des;
       }
+      return des;
    }
    char* Utils::strcpy(char* des, const char* src)const {
       int i;
@@ -62,7 +62,7 @@ namespace seneca {
 
    int Utils::getInt() {
         int value;
-        char newline = '\0';
+        int newline = '\0';
 
         while (true) {
             std::cin >> value;
