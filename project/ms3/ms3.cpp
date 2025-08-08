@@ -42,6 +42,7 @@ void virtuals(Billable& B, ifstream& file, ofstream& outfile) {
    cout << endl << "Checking Virtuals: " << endl;
    while (file) {
       B.read(file);
+      cout << "still Reading" << endl;
    }
    B.print() << endl;
    B.print(outfile) << endl;

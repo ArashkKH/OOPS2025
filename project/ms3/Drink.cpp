@@ -85,8 +85,10 @@ namespace seneca {
         selection = ms2.select();
         switch (selection) {
         case 0:{
-            break;
+            m_size = '\0';
             return false;
+            break;
+
         }
         case 1: {
             m_size = 'S';
