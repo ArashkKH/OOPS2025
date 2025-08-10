@@ -1,0 +1,14 @@
+In line number 77 of your output:
+The output should be:
+                     Tax:           1.85
+                     ^
+But your output is: 
+                       Tax:         1.85
+                     ^
+
+Unmatched character details:
+The character in column 22 is supposed to be:
+  [T] ASCII code(84)
+but you printed
+  [Space] ASCII code(32)
+
