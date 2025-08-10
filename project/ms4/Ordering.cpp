@@ -35,9 +35,9 @@ namespace seneca {
         double grandTotal = total + tax;
         
         ostr << setfill(' ') << right;
-        ostr << setw(31 - 4) << "Total:" << setw(9 + 4) << fixed << setprecision(2) << total << endl;
-        ostr << setw(31 - 4) << "Tax:" << setw(9 + 4) << fixed << setprecision(2) << tax << endl;
-        ostr << setw(31 - 4) << "Total+Tax:" << setw(9 + 4) << fixed << setprecision(2) << grandTotal << endl;
+        ostr << setw(31) << "Total:" << setw(9) << fixed << setprecision(2) << total << endl;
+        ostr << setw(31) << "Tax:" << setw(9) << fixed << setprecision(2) << tax << endl;
+        ostr << setw(31) << "Total+Tax:" << setw(9) << fixed << setprecision(2) << grandTotal << endl;
         ostr << "========================================" << endl;
     }
     
