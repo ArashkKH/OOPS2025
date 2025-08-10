@@ -157,7 +157,7 @@ namespace seneca {
     }
     
     void Ordering::listDrinks() const {
-        cout << "List Of Avaiable Meals" << endl;
+        cout << "List Of Avaiable Drinks" << endl;
         cout << "========================================" << endl;
         for (size_t i = 0; i < m_drinkCounter; i++) {
             m_drinks[i].print() << endl;
