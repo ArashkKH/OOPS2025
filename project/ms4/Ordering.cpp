@@ -37,25 +37,29 @@ namespace seneca {
         double tax = total * Tax;
         double grandTotal = total + tax;
 
-        // We want labels ("Total:", "Tax:", "Total+Tax:") to START at the same column,
-        // and the numeric values to END at the same column.
-        // Strategy: print a fixed left indent, then LEFT-align the label into a small
-        // label field width, then RIGHT-align the value into a fixed numeric field.
-        const int indentWidth = 21;      // spaces before any label
-        const int labelField  = 6;       // minimal label field width (fits "Total:")
+        // Align labels to the same start column and values to the same end column.
+        const int indentWidth = 21;      // exact spaces before any label
+        const int labelField  = 6;       // minimum field for label ("Total:")
         const int valueField  = 13;      // width for the numeric value field
 
         // helper lambda to print one line with proper alignment
         auto line = [&](const char* label, double value) {
             ostr << setfill(' ');
-            // left indent
-            ostr << setw(indentWidth) << ' ';
-            // label left-aligned inside labelField (pads on the RIGHT if label is shorter)
+            // output EXACT indent (avoid streaming a single ' ' with setw which shifts by one)
+            ostr << setw(indentWidth) << "";
+            // label left-aligned inside labelField
             ostr << left << setw(labelField) << label;
             // value right-aligned inside valueField
             ostr << right << setw(valueField) << fixed << setprecision(2) << value << '
 ';
         };
+
+        line("Total:", total);
+        line("Tax:", tax);
+        line("Total+Tax:", grandTotal);
+        ostr << "========================================
+";
+    };
 
         line("Total:", total);
         line("Tax:", tax);
