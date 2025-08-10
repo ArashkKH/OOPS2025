@@ -42,7 +42,6 @@ namespace seneca{
             
             // query functions
             const char* getName() const;
-            double getPrice() const;
 
 
         public:

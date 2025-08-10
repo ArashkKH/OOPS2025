@@ -145,7 +145,7 @@ namespace seneca {
                 break;
             }
 
-        return getPrice() * multiplier;
+        return Billable::price() * multiplier;
     }
 }
  

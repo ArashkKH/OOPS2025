@@ -41,25 +41,24 @@ namespace seneca {
         m_price = 0;
     }
 
-    double Billable::price() const{
+    double Billable::price() const {
         return m_price;
     }
 
-    double operator+(double money, const Billable& B){
-        return money + B.m_price;
+   double operator+(double money, const Billable& B) {
+        return money + B.price();
     }
 
-    double& operator+=(double& money, const Billable& B){
-        return money += B.m_price;
+    double& operator+=(double& money, const Billable& B) {
+        money += B.price();
+        return money;
     }
 
     const char* Billable::getName() const {
         return m_name ? m_name : "";
     }
 
-    double Billable::getPrice() const{
-        return m_price;
-    }
+
 
     Billable::operator const char*() const {
         return m_name;
