@@ -37,16 +37,31 @@ namespace seneca {
         double tax = total * Tax;
         double grandTotal = total + tax;
 
-        ostr << setfill(' ') << right;
-        // Align labels further right to match the expected indentation
-        // Expected has 21 spaces before "Total:", which means width 27 (21 spaces + 6 chars in "Total:")
-        const int labelWidth = 27; 
-        const int valueWidth = 13; 
+        // We want labels ("Total:", "Tax:", "Total+Tax:") to START at the same column,
+        // and the numeric values to END at the same column.
+        // Strategy: print a fixed left indent, then LEFT-align the label into a small
+        // label field width, then RIGHT-align the value into a fixed numeric field.
+        const int indentWidth = 21;      // spaces before any label
+        const int labelField  = 6;       // minimal label field width (fits "Total:")
+        const int valueField  = 13;      // width for the numeric value field
 
-        ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
-        ostr << setw(labelWidth) << "Tax:"       << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
-        ostr << setw(labelWidth) << "Total+Tax:" << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
-        ostr << "========================================\n";
+        // helper lambda to print one line with proper alignment
+        auto line = [&](const char* label, double value) {
+            ostr << setfill(' ');
+            // left indent
+            ostr << setw(indentWidth) << ' ';
+            // label left-aligned inside labelField (pads on the RIGHT if label is shorter)
+            ostr << left << setw(labelField) << label;
+            // value right-aligned inside valueField
+            ostr << right << setw(valueField) << fixed << setprecision(2) << value << '
+';
+        };
+
+        line("Total:", total);
+        line("Tax:", tax);
+        line("Total+Tax:", grandTotal);
+        ostr << "========================================
+";
     }
 
     
@@ -157,7 +172,7 @@ namespace seneca {
     }
     
     void Ordering::listFoods() const {
-        cout << "List Of Avaiable Meals" << '\n';
+        cout << "List Of Available Meals" << '\n';
         cout << "========================================" << '\n';
         for (size_t i = 0; i < m_foodCounter; i++) {
             m_foods[i].print() << '\n';
@@ -166,7 +181,7 @@ namespace seneca {
     }
     
     void Ordering::listDrinks() const {
-        cout << "List Of Avaiable Drinks" << '\n';
+        cout << "List Of Available Drinks" << '\n';
         cout << "========================================" << '\n';
         for (size_t i = 0; i < m_drinkCounter; i++) {
             m_drinks[i].print() << '\n';
