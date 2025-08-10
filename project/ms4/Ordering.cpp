@@ -27,14 +27,14 @@ namespace seneca {
     
     // Private Methods
     void Ordering::printBillTitle(ostream& ostr) const {
-        // Use '0' only for the bill number, then restore the fill char
+        // below line with use of ai 
         char oldFill = ostr.fill('0');
         ostr << "Bill # " << setw(3) << m_billNumber;
         ostr.fill(oldFill);
         ostr << " =============================" << '\n';
     }
     
-    // 
+    // whole function Below was by AI
     void Ordering::printTotals(ostream& ostr, double total) const {
         double tax = total * Tax;
         double grandTotal = total + tax;
