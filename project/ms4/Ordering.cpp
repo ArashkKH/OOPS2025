@@ -60,14 +60,14 @@ namespace seneca {
         if (gap < gapMin) gap = gapMin;
         ostr << setfill(' ') << right << setw(indent) << ""
              << "Tax:" << setw(gap) << ""
-             << right << setw(valueWidth) << fixed << setprecision(2) << tax << '\n';
+             << right << setw(valueWidth - 3) << fixed << setprecision(2) << tax << '\n';
 
         // ----- Total+Tax -----
         gap = valueStartCol - (indent + 10); // 10 == len("Total+Tax:")
         if (gap < gapMin) gap = gapMin;
         ostr << setfill(' ') << right << setw(indent) << ""
              << "Total+Tax:" << setw(gap) << ""
-             << right << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
+             << right << setw(valueWidth - 9) << fixed << setprecision(2) << grandTotal << '\n';
 
         ostr << "========================================\n";
     }
