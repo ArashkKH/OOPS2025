@@ -16,158 +16,105 @@ and include the citation of that code.
 ----------------------------------------------------------------------------
 */
 
-
-
 #include "Drink.h"
 #include "Utils.h"
-#include "Billable.h"
 #include "Menu.h"
-
-
-#include <iostream>
-
-// for getting two Digits Codes
-// Code suggested by AI
 #include <iomanip>
+#include <cstring>
 
-using std::ostream;
 
-namespace seneca {
-    
-    ostream& Drink::print(ostream& os) const{
-        char* buffer = nullptr;
-        ut.alocpy(buffer, getName());
-        os.setf(std::ios::left);
-        os.width(28);
-        os.fill('.');
-        os << (buffer ? buffer : "");
-        delete[] buffer;
 
-        // Print size
-        if(!ordered()){
-            os << ".....";
-        }else{
-            switch (m_size)
-            {
-            case 'S':
-                os << "SML..";
-                break;
-            case 'M':
-                os << "MID..";
-                break;
-            case 'L':
-                os << "LRG..";
-                break;
-            case 'X':
-                os << "XLR..";
-                break;
-            default:
-                os << ".....";
-                break;
-            // Ensure a return value in all code paths
-            return os;
+using std::left;
+using std::right;
+using std::setw;
+using std::setfill;
+using std::fixed;
+using std::setprecision;
+
+
+namespace seneca{
+    // constructor
+    Drink::Drink() : Billable() , m_size(0) {}
+    // Printing Method
+    ostream& Drink::print(ostream& ostr) const {
+        if(*this){
+            // Got this line from Kiarash (Seneca Mr. Hong huan Student)
+            ostr << left << setw(28) << setfill('.') << (const char*)(*this);
+
+            if(ordered()){
+                switch (m_size){
+                    case 'S' : ostr << "SML.."; break;
+                    case 'M' : ostr << "MID.."; break;
+                    case 'L' : ostr << "LRG.."; break;
+                    case 'X' : ostr << "XLR.."; break;
+                    default: ostr << "....."; break;
+                }
+            }else{
+                ostr << ".....";
+            }
+            // Got this line from Kiarash (Seneca Mr. Hong huan Student)
+            ostr << right << setw(7) << setfill(' ') << fixed << setprecision(2) << price();
+        }
+        return ostr;
+    }
+    // Ordering Method
+    bool Drink::order() {
+        Menu drinkMenu("Drink Size Selection" , "Back" , 3);
+        drinkMenu << "Small" << "Medium" << "Larg" << "Extra Large";
+
+        size_t selecation = drinkMenu.select();
+
+        switch (selecation){
+            case 1: m_size = 'S'; return true;
+            case 2: m_size = 'M'; return true;
+            case 3: m_size = 'L'; return true;
+            case 4: m_size = 'X'; return true;
+            default: return false;
+
+        }
+    }
+
+    // ordered query
+    bool Drink::ordered() const {
+        return m_size != 0;
+    }
+
+    // Reading from File
+    //got this function code from Kiarash - (other section student of out course)
+    std::ifstream& Drink::read(std::ifstream& file) {
+        char name[256]{};
+        double priceVal;
+
+        if (file.good()) {
+            file.getline(name, 256, ',');
+            file >> priceVal;
+            file.ignore(1000, '\n');
+
+            if (file) {
+                name[255] = '\0';
+                Billable::name(name);
+                Billable::price(priceVal);
+                m_size = 0; // default to not ordered
             }
         }
 
-        // for getting two Digits Codes
-        // Code suggested by AI        os.unsetf(std::ios::left);
-        os.width(7);
-        os << std::right << std::fixed << std::setprecision(2) << price();
-
-        return os;
-    };
-
-    bool Drink::order(){
-        Menu ms2("Drink Size Selection" , "Back" , 1 ,3);
-        ms2 << "Small" << "Medium" << "Larg" << "Extra Large";
-        size_t selection{};
-    
-        selection = ms2.select();
-        switch (selection) {
-        case 0:{
-            m_size = '\0';
-            return false;
-            break;
-
-        }
-        case 1: {
-            m_size = 'S';
-            return true;
-            break;
-        }
-        case 2:{
-            m_size = 'M';
-            return true;
-            break;
-        }
-        case 3:{
-            m_size = 'L';
-            return true;
-            break;
-        }
-        case 4:{
-            m_size = 'X';
-            return true;
-            break;
-        }
-        default:
-            return false;
-        }
-        return false;
-    }
-
-    bool Drink::ordered() const{
-        if(m_size){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    ifstream& Drink::read(ifstream& file) {
-        // This line was suggested by AI for reading failure
-        std::streampos pos = file.tellg();
-
-        char buffer[1024]{};
-        double priceVal = 0.0;
-
-        if (file.getline(buffer, 1024, ',') && (file >> priceVal)) {
-            file.ignore(1000, '\n');
-            name(buffer);
-            Billable::price(priceVal);
-            m_size = '\0';
-        } else {            
-            // This block and the placementof block aboove in the if statement
-            // were suggested by AI for reading failure
-            file.clear();
-            file.seekg(pos);
-        }
         return file;
     }
+    
+    // had to redo the while MS for this read function >:(
 
-    double Drink::price() const{
-        double multiplier = 0;
+    // price Method
+    double Drink::price() const {
+        if(!ordered() || m_size == 'L'){
+            return Billable::price();
+        }
 
-        switch (m_size)
-            {
-            case 'S':
-                multiplier = 0.5;
-                break;
-            case 'M':
-                multiplier = 0.75;
-                break;
-            case 'L':
-                multiplier = 1;
-                break;
-            case 'X':
-                multiplier = 1.5;
-                break;
-            default:
-                multiplier = -1 / getPrice();
-                break;
-            }
-
-        return getPrice() * multiplier;
+        double basePrice = Billable::price();
+        switch (m_size){
+            case 'S': return basePrice * 0.5;
+            case 'M': return basePrice * 0.75;
+            case 'X': return basePrice * 1.5;
+            default : return basePrice;
+        }
     }
 }
- 

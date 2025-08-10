@@ -34,7 +34,7 @@ namespace seneca {
             bool m_child = false;
             char* m_customize = nullptr;  
         public:
-            Food() = default;
+            Food();
             //copy constructor
             Food(const Food& src);
             Food& operator=(const Food& src);

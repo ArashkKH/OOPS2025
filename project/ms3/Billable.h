@@ -36,21 +36,14 @@ namespace seneca{
         protected:
             // Sets the item's price
             void price(double value);
-
             // Sets the item's name, Hnadling dynamic allocation
             void name(const char* name);
-            
-            // query functions
-            const char* getName() const;
-            double getPrice() const;
-
-
         public:
-            Billable() = default;
+            Billable();
             // copy constructor
-            Billable(const Billable& src);
+            Billable(const Billable& other);
             // Assignment Operator
-            Billable& operator=(const Billable& src);
+            Billable& operator=(const Billable& other);
             // ensuring proper cleanup using a virtual constructor
             virtual ~Billable();
             // Getting the item's price and allowing derived classes to override
@@ -70,11 +63,11 @@ namespace seneca{
 
 
             /* --------------------------- Operator Overloads --------------------------- */
-
-            friend double operator+(double money, const Billable& B);
-            friend double& operator+=(double& money, const Billable& B);
+            
             operator const char*() const;
-    };
+        };
+        double operator+(double money, const Billable& B);
+        double& operator+=(double& money, const Billable& B);
 };
 
 #endif // BILLABLE_H
