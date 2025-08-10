@@ -198,15 +198,16 @@ namespace seneca {
     
     void Ordering::printBill(ostream& ostr) const {
         double total = 0.0;
+        
         printBillTitle(ostr);
         
         for (size_t i = 0; i < m_billableCounter; i++) {
             if (m_billItems[i]) {
-                m_billItems[i]->print(ostr) << endl;  // Each item prints itself
-                total += m_billItems[i]->price();     // Add to running total
+                m_billItems[i]->print(ostr) << endl;
+                total += m_billItems[i]->price();
             }
         }
-        
+    
         printTotals(ostr, total);
     }
     
