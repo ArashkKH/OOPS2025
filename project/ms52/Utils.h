@@ -28,9 +28,7 @@ namespace seneca {
       int getInt(int min , int max);
       char* makeBillFileName(char* filename, size_t billNo) const;
    };
-   extern Utils ut;   // makes the ut object available where Utils.h is included
-                     // to call a Utils function call it as follows
-                     // ut.strcpy(des, src);
+   extern Utils ut;
 }
 
 #endif // !SENECA_UTILS_H
