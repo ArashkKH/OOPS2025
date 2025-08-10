@@ -16,35 +16,68 @@ and include the citation of that code.
 ----------------------------------------------------------------------------
 */
 
+
 #include "Billable.h"
 #include "Utils.h"
-#include <cstring>
 
-namespace seneca{
+namespace seneca {
+    
 
-    // Protected Methods
-    void Billable::price(double val){
-        m_price = val;
+    Billable::Billable(const Billable& src){
+        *this = src;
     }
-    void Billable::name(const char* name){ut.alocpy(m_name , name);}
-    // constructors and destructors
-    Billable::Billable() : m_name(nullptr) , m_price(0.0) {}
-    Billable::Billable(const Billable& other): m_name{nullptr} , m_price(other.m_price) {
-        name(other.m_name);
-    }
-    Billable& Billable::operator=(const Billable& other){
-        if (this != &other){
-            name(other.m_name);
-            m_price = other.m_price;
+
+    Billable& Billable::operator=(const Billable& src){
+        if (this != &src) {
+            ut.alocpy(m_name , src.m_name);
+            m_price = src.m_price;
         }
         return *this;
     }
-    // Virtuals
-    Billable::~Billable(){delete [] m_name; m_name = nullptr;}
-    double Billable::price() const {return m_price;};
-    // Conversions
-    Billable::operator const char*() const{return m_name;}
-    // Global Operators
-    double operator+(double money , const Billable& B){return money + B.price();}
-    double& operator+=(double& money, const Billable& B){return money += B.price();}
+
+    Billable::~Billable(){
+        delete[] m_name;
+        m_name = nullptr;
+        m_price = 0;
+    }
+
+    double Billable::price() const{
+        return m_price;
+    }
+
+    double operator+(double money, const Billable& B){
+        return money + B.m_price;
+    }
+
+    double& operator+=(double& money, const Billable& B){
+        return money += B.m_price;
+    }
+
+    const char* Billable::getName() const {
+        return m_name ? m_name : "";
+    }
+
+    double Billable::getPrice() const{
+        return m_price;
+    }
+
+    Billable::operator const char*() const {
+        return m_name;
+    }
+
+    void Billable::name(const char* name) {
+        if (name && name[0] != '\0') {
+            ut.alocpy(m_name, name);
+        } else {
+            delete[] m_name;
+            m_name = nullptr;
+        }
+    }
+
+    void Billable::price(double value) {
+        m_price = value;
+    }
+
+
 }
+

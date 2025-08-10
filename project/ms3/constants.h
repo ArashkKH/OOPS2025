@@ -25,5 +25,7 @@ namespace seneca {
    const size_t MaximumNumberOfMenuItems = 20u;
    const int DrinksPrintMaxNameCharacters = 25;
    const int DrinksPrintMaxNameSpaces = 28;
+   const double Tax = 0.13;
+   const size_t MaximumNumberOfBillItems = 50u;
 }
 #endif // !SENECA_CONSTANTS_H

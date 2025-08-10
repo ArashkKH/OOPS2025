@@ -29,17 +29,13 @@ using std::ifstream;
 namespace seneca {
 
     class Drink : public Billable {
-        char m_size = '\0';
-        
+        private:
+            char m_size = '\0';
         public:
-            // Constructor
-            Drink();
-
             ostream& print(ostream& ostr=cout) const override;
             bool order() override;
             bool ordered() const override;
             ifstream& read(ifstream& file);
-
             double price() const override;
     };
 
