@@ -35,14 +35,10 @@ namespace seneca {
         double grandTotal = total + tax;
         
         ostr << setfill(' ') << right;
-        ostr << setw(31 - 4) << "Total:" << setw(9) << fixed << setprecision(2) << total << endl;
-        ostr << setw(31 - 4) << "Tax:" << setw(9) << fixed << setprecision(2) << tax << endl;
-        ostr << setw(31 - 4) << "Total+Tax:" << setw(9) << fixed << setprecision(2) << grandTotal << endl;
+        ostr << setw(31 - 4) << "Total:" << setw(9 + 1) << fixed << setprecision(2) << total << endl;
+        ostr << setw(31 - 4) << "Tax:" << setw(9 + 1) << fixed << setprecision(2) << tax << endl;
+        ostr << setw(31 - 4) << "Total+Tax:" << setw(9 + 1) << fixed << setprecision(2) << grandTotal << endl;
         ostr << "========================================" << endl;
-        // ostr << right << setw(31) << setfill(' ') << "Total:";
-        // ostr << right << setw(9) << setfill(' ') << fixed << setprecision(2) << price();
-        // ostr << endl;
-
     }
     
     size_t Ordering::countRecords(const char* file) const {
