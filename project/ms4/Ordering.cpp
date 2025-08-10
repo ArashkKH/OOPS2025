@@ -34,19 +34,16 @@ namespace seneca {
         ostr << " =============================" << '\n';
     }
     
+    // 
     void Ordering::printTotals(ostream& ostr, double total) const {
         double tax = total * Tax;
         double grandTotal = total + tax;
 
-        // We want all labels to START at the same column (same left indentation),
-        // and all values to be right-aligned at the same column.
-        // Use a fixed left indent for labels, then compute the gap to the value field
-        // based on each label's length so that the value column is consistent.
-        const int indent = 21;          // number of leading spaces before any label
-        const int valueWidth = 13;      // width reserved for the numeric value (right aligned)
-        const int gapMin = 1;           // at least one space between label and value field
-        const int maxLabelLen = 10;     // length of "Total+Tax:"
-        const int valueStartCol = indent + maxLabelLen + gapMin; // fixed column where value field begins
+        const int indent = 21;          
+        const int valueWidth = 13;      
+        const int gapMin = 1;           
+        const int maxLabelLen = 10;     
+        const int valueStartCol = indent + maxLabelLen + gapMin; 
 
         // ----- Total -----
         int gap = valueStartCol - (indent + 6); // 6 == len("Total:")
