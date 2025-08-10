@@ -67,7 +67,7 @@ namespace seneca {
         if (gap < gapMin) gap = gapMin;
         ostr << setfill(' ') << right << setw(indent) << ""
              << "Total+Tax:" << setw(gap) << ""
-             << right << setw(valueWidth - 6) << fixed << setprecision(2) << grandTotal << '\n';
+             << right << setw(valueWidth - 5) << fixed << setprecision(2) << grandTotal << '\n';
 
         ostr << "========================================\n";
     }
