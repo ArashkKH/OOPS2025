@@ -19,6 +19,7 @@ that my professor provided to complete my workshops and assignments.
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <cstring>
 
 using namespace std;
 
@@ -37,16 +38,37 @@ namespace seneca {
         double tax = total * Tax;
         double grandTotal = total + tax;
 
-        ostr << setfill(' ') << right;
-        // Align labels further right to match the expected indentation
-        // Expected has 21 spaces before "Total:", which means width 27 (21 spaces + 6 chars in "Total:")
-        const int labelWidth = 27; 
-        const int valueWidth = 13; 
+        // We want all labels to START at the same column (same left indentation),
+        // and all values to be right-aligned at the same column.
+        // Use a fixed left indent for labels, then compute the gap to the value field
+        // based on each label's length so that the value column is consistent.
+        const int indent = 21;          // number of leading spaces before any label
+        const int valueWidth = 13;      // width reserved for the numeric value (right aligned)
+        const int gapMin = 1;           // at least one space between label and value field
+        const int maxLabelLen = 10;     // length of "Total+Tax:"
+        const int valueStartCol = indent + maxLabelLen + gapMin; // fixed column where value field begins
 
-        // Left-align labels so they start at the same column; right-align values to a fixed column
-        ostr << left << setw(labelWidth) << "Total:"     << right << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
-        ostr << left << setw(labelWidth) << "Tax:"       << right << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
-        ostr << left << setw(labelWidth) << "Total+Tax:" << right << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
+        // ----- Total -----
+        int gap = valueStartCol - (indent + 6); // 6 == len("Total:")
+        if (gap < gapMin) gap = gapMin;
+        ostr << setfill(' ') << right << setw(indent) << ""
+             << "Total:" << setw(gap) << ""
+             << right << setw(valueWidth) << fixed << setprecision(2) << total << '\n';
+
+        // ----- Tax -----
+        gap = valueStartCol - (indent + 4); // 4 == len("Tax:")
+        if (gap < gapMin) gap = gapMin;
+        ostr << setfill(' ') << right << setw(indent) << ""
+             << "Tax:" << setw(gap) << ""
+             << right << setw(valueWidth) << fixed << setprecision(2) << tax << '\n';
+
+        // ----- Total+Tax -----
+        gap = valueStartCol - (indent + 10); // 10 == len("Total+Tax:")
+        if (gap < gapMin) gap = gapMin;
+        ostr << setfill(' ') << right << setw(indent) << ""
+             << "Total+Tax:" << setw(gap) << ""
+             << right << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
+
         ostr << "========================================\n";
     }
 
