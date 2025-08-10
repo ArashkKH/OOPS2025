@@ -26,8 +26,11 @@ namespace seneca {
     
     // Private Methods
     void Ordering::printBillTitle(ostream& ostr) const {
-        ostr << "Bill # " << setfill('0') << setw(3) << m_billNumber 
-             << " =============================" << endl;
+        // Use '0' only for the bill number, then restore the fill char
+        char oldFill = ostr.fill('0');
+        ostr << "Bill # " << setw(3) << m_billNumber;
+        ostr.fill(oldFill);
+        ostr << " =============================" << '\n';
     }
     
     void Ordering::printTotals(ostream& ostr, double total) const {
@@ -35,17 +38,16 @@ namespace seneca {
         double grandTotal = total + tax;
 
         ostr << setfill(' ') << right;
-
-        // These numbers come from your assignment's expected output formatting
-        const int labelWidth = 27; // pushes "Total:" to the correct starting column
-        const int valueWidth = 11; // ensures numbers line up perfectly
+        // Align labels further right to match the expected indentation
+        // Expected has 21 spaces before "Total:", which means width 27 (21 spaces + 6 chars in "Total:")
+        const int labelWidth = 27; 
+        const int valueWidth = 13; 
 
         ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
         ostr << setw(labelWidth) << "Tax:"       << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
         ostr << setw(labelWidth) << "Total+Tax:" << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
-        ostr << "========================================" << '\n';
+        ostr << "========================================\n";
     }
-
 
     
     size_t Ordering::countRecords(const char* file) const {
@@ -155,21 +157,21 @@ namespace seneca {
     }
     
     void Ordering::listFoods() const {
-        cout << "List Of Avaiable Meals" << endl;
-        cout << "========================================" << endl;
+        cout << "List Of Available Meals" << '\n';
+        cout << "========================================" << '\n';
         for (size_t i = 0; i < m_foodCounter; i++) {
-            m_foods[i].print() << endl;
+            m_foods[i].print() << '\n';
         }
-        cout << "========================================" << endl;
+        cout << "========================================" << '\n';
     }
     
     void Ordering::listDrinks() const {
-        cout << "List Of Avaiable Drinks" << endl;
-        cout << "========================================" << endl;
+        cout << "List Of Available Drinks" << '\n';
+        cout << "========================================" << '\n';
         for (size_t i = 0; i < m_drinkCounter; i++) {
-            m_drinks[i].print() << endl;
+            m_drinks[i].print() << '\n';
         }
-        cout << "========================================" << endl;
+        cout << "========================================" << '\n';
     }
     
     void Ordering::printBill(ostream& ostr) const {
@@ -179,7 +181,7 @@ namespace seneca {
         
         for (size_t i = 0; i < m_billableCounter; i++) {
             if (m_billItems[i]) {
-                m_billItems[i]->print(ostr) << endl;
+                m_billItems[i]->print(ostr) << '\n';
                 total += m_billItems[i]->price();
             }
         }
@@ -255,8 +257,8 @@ namespace seneca {
                 printBill(billFile);
             }
             
-            cout << "Saved bill number " << m_billNumber << endl;
-            cout << "Starting bill number " << (m_billNumber + 1) << endl;
+            cout << "Saved bill number " << m_billNumber << '\n';
+            cout << "Starting bill number " << (m_billNumber + 1) << '\n';
             
             // Clean up current bill
             for (size_t i = 0; i < m_billableCounter; i++) {
