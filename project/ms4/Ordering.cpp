@@ -44,12 +44,9 @@ namespace seneca {
         const int valueWidth = 13; 
 
         // Left-align labels so they start at the same column; right-align values to a fixed column
-        ostr << left << setw(labelWidth) << "Total:"     << right << setw(valueWidth) << fixed << setprecision(2) << total      << '
-';
-        ostr << left << setw(labelWidth) << "Tax:"       << right << setw(valueWidth) << fixed << setprecision(2) << tax        << '
-';
-        ostr << left << setw(labelWidth) << "Total+Tax:" << right << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '
-';
+        ostr << left << setw(labelWidth) << "Total:"     << right << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
+        ostr << left << setw(labelWidth) << "Tax:"       << right << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
+        ostr << left << setw(labelWidth) << "Total+Tax:" << right << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
         ostr << "========================================\n";
     }
 
