@@ -1,0 +1,30 @@
+Ordering.cpp:56:87: warning: missing terminating ' character [enabled by default]
+             ostr << right << setw(valueField) << fixed << setprecision(2) << value << '
+                                                                                       ^
+Ordering.cpp:56:13: error: missing terminating ' character
+             ostr << right << setw(valueField) << fixed << setprecision(2) << value << '
+             ^
+Ordering.cpp:57:1: warning: missing terminating ' character [enabled by default]
+ ';
+ ^
+Ordering.cpp:57:1: error: missing terminating ' character
+Ordering.cpp:63:17: warning: missing terminating " character [enabled by default]
+         ostr << "========================================
+                 ^
+Ordering.cpp:63:9: error: missing terminating " character
+         ostr << "========================================
+         ^
+Ordering.cpp:64:1: warning: missing terminating " character [enabled by default]
+ ";
+ ^
+Ordering.cpp:64:1: error: missing terminating " character
+Ordering.cpp: In lambda function:
+Ordering.cpp:58:9: error: expected primary-expression before ‘}’ token
+         };
+         ^
+Ordering.cpp:58:9: error: expected ‘;’ before ‘}’ token
+Ordering.cpp: In member function ‘void seneca::Ordering::printTotals(std::ostream&, double) const’:
+Ordering.cpp:65:5: error: expected primary-expression before ‘}’ token
+     }
+     ^
+Ordering.cpp:65:5: error: expected ‘;’ before ‘}’ token
