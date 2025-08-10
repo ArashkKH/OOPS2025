@@ -35,7 +35,7 @@ namespace seneca {
         double grandTotal = total + tax;
 
         ostr << setfill(' ') << right;
-        const int labelWidth = 22; // matches expected "start column" for label
+        const int labelWidth = 17; // matches expected "start column" for label
         const int valueWidth = 13; // spaces between label and value
 
         ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
