@@ -35,14 +35,17 @@ namespace seneca {
         double grandTotal = total + tax;
 
         ostr << setfill(' ') << right;
-        const int labelWidth = 22; // matches expected "start column" for label
-        const int valueWidth = 13; // spaces between label and value
+
+        // These numbers come from your assignment's expected output formatting
+        const int labelWidth = 27; // pushes "Total:" to the correct starting column
+        const int valueWidth = 11; // ensures numbers line up perfectly
 
         ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
         ostr << setw(labelWidth) << "Tax:"       << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
         ostr << setw(labelWidth) << "Total+Tax:" << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
-        ostr << "========================================\n";
+        ostr << "========================================" << '\n';
     }
+
 
     
     size_t Ordering::countRecords(const char* file) const {
