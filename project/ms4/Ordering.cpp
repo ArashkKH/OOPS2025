@@ -37,35 +37,16 @@ namespace seneca {
         double tax = total * Tax;
         double grandTotal = total + tax;
 
-        // Align labels to the same start column and values to the same end column.
-        const int indentWidth = 21;      // exact spaces before any label
-        const int labelField  = 6;       // minimum field for label ("Total:")
-        const int valueField  = 13;      // width for the numeric value field
+        ostr << setfill(' ') << right;
+        // Align labels further right to match the expected indentation
+        // Expected has 21 spaces before "Total:", which means width 27 (21 spaces + 6 chars in "Total:")
+        const int labelWidth = 27; 
+        const int valueWidth = 13; 
 
-        // helper lambda to print one line with proper alignment
-        auto line = [&](const char* label, double value) {
-            ostr << setfill(' ');
-            // output EXACT indent (avoid streaming a single ' ' with setw which shifts by one)
-            ostr << setw(indentWidth) << "";
-            // label left-aligned inside labelField
-            ostr << left << setw(labelField) << label;
-            // value right-aligned inside valueField
-            ostr << right << setw(valueField) << fixed << setprecision(2) << value << '
-';
-        };
-
-        line("Total:", total);
-        line("Tax:", tax);
-        line("Total+Tax:", grandTotal);
-        ostr << "========================================
-";
-    };
-
-        line("Total:", total);
-        line("Tax:", tax);
-        line("Total+Tax:", grandTotal);
-        ostr << "========================================
-";
+        ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
+        ostr << setw(labelWidth) << "Tax:"       << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
+        ostr << setw(labelWidth) << "Total+Tax:" << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
+        ostr << "========================================\n";
     }
 
     
