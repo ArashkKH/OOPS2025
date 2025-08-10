@@ -33,16 +33,17 @@ namespace seneca {
     void Ordering::printTotals(ostream& ostr, double total) const {
         double tax = total * Tax;
         double grandTotal = total + tax;
-        
-        ostr << setfill(' ') << right;
-        const int labelWidth = 31;
-        const int valueWidth = 9;
 
-        ostr << setw(labelWidth) << "Total:"      << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
-        ostr << setw(labelWidth) << "Tax:"        << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
-        ostr << setw(labelWidth) << "Total+Tax:"  << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
+        ostr << setfill(' ') << right;
+        const int labelWidth = 22; // matches expected "start column" for label
+        const int valueWidth = 13; // spaces between label and value
+
+        ostr << setw(labelWidth) << "Total:"     << setw(valueWidth) << fixed << setprecision(2) << total      << '\n';
+        ostr << setw(labelWidth) << "Tax:"       << setw(valueWidth) << fixed << setprecision(2) << tax        << '\n';
+        ostr << setw(labelWidth) << "Total+Tax:" << setw(valueWidth) << fixed << setprecision(2) << grandTotal << '\n';
         ostr << "========================================\n";
     }
+
     
     size_t Ordering::countRecords(const char* file) const {
         size_t newlineCounter = 0;
