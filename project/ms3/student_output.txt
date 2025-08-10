@@ -1,9 +1,9 @@
-Script started on Sat 09 Aug 2025 08:58:20 PM EDT
-==194539== Memcheck, a memory error detector
-==194539== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==194539== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==194539== Command: ms.exe
-==194539== 
+Script started on Sat 09 Aug 2025 09:03:42 PM EDT
+==195419== Memcheck, a memory error detector
+==195419== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==195419== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==195419== Command: ms.exe
+==195419== 
 Testing Drink Class=============================
 Drink Tester!
 Pepsi
@@ -157,13 +157,13 @@ Coffee...........................   5.00
 foodout.csv: ==============>
 Poutine..........................   6.00
 <==============
-==194539== 
-==194539== HEAP SUMMARY:
-==194539==     in use at exit: 0 bytes in 0 blocks
-==194539==   total heap usage: 168 allocs, 168 frees, 127,807 bytes allocated
-==194539== 
-==194539== All heap blocks were freed -- no leaks are possible
-==194539== 
-==194539== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==195419== 
+==195419== HEAP SUMMARY:
+==195419==     in use at exit: 0 bytes in 0 blocks
+==195419==   total heap usage: 168 allocs, 168 frees, 127,807 bytes allocated
+==195419== 
+==195419== All heap blocks were freed -- no leaks are possible
+==195419== 
+==195419== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Sat 09 Aug 2025 08:58:44 PM EDT
+Script done on Sat 09 Aug 2025 09:04:11 PM EDT
