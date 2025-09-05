@@ -53,7 +53,7 @@ using std::endl;
         for (int i = 0; i < size; i++)
         {
             cout << src[i];
-            if (i < size - 1) cout << ",";
+            if (i < size - 1) cout << ", ";
         }
 
         cout << endl;  
