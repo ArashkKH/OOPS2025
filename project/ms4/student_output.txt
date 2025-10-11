@@ -1,9 +1,9 @@
-Script started on Sat 09 Aug 2025 10:54:42 PM EDT
-==221545== Memcheck, a memory error detector
-==221545== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==221545== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==221545== Command: ms.exe
-==221545== 
+Script started on Sat 09 Aug 2025 11:22:00 PM EDT
+==228092== Memcheck, a memory error detector
+==228092== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==228092== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==228092== Command: ms.exe
+==228092== 
 Testing Invalid Ordering if data file don't exist!
 Passed!
 Testing list foods..................................
@@ -74,16 +74,16 @@ Bill # 001 =============================
 Hamberger...................Adult  12.00 >> abc
 Pepsi.......................SML..   2.25
                      Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
+                     Tax:           1.85
+                     Total+Tax:    16.10
 ========================================
 Testing saving bill in a file........................
 Bill # 001 =============================
 Hamberger...................Adult  12.00
 Pepsi.......................SML..   2.25
                      Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
+                     Tax:           1.85
+                     Total+Tax:    16.10
 ========================================
 testing hassUnsavedBill()............................
 Passed hassUnsavedBill()!
@@ -94,16 +94,16 @@ Bill # 001 =============================
 Hamberger...................Adult  12.00
 Pepsi.......................SML..   2.25
                      Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
+                     Tax:           1.85
+                     Total+Tax:    16.10
 ========================================
-==221545== 
-==221545== HEAP SUMMARY:
-==221545==     in use at exit: 0 bytes in 0 blocks
-==221545==   total heap usage: 97 allocs, 97 frees, 147,035 bytes allocated
-==221545== 
-==221545== All heap blocks were freed -- no leaks are possible
-==221545== 
-==221545== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==228092== 
+==228092== HEAP SUMMARY:
+==228092==     in use at exit: 0 bytes in 0 blocks
+==228092==   total heap usage: 97 allocs, 97 frees, 147,035 bytes allocated
+==228092== 
+==228092== All heap blocks were freed -- no leaks are possible
+==228092== 
+==228092== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Sat 09 Aug 2025 10:54:46 PM EDT
+Script done on Sat 09 Aug 2025 11:22:05 PM EDT

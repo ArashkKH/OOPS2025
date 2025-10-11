@@ -1,60 +1,51 @@
-Script started on Sat 09 Aug 2025 10:54:42 PM EDT
-==221545== Memcheck, a memory error detector
-==221545== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==221545== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
-==221545== Command: ms.exe
-==221545== 
-Testing Invalid Ordering if data file don't exist!
-Passed!
-Testing list foods..................................
-List Of Avaiable Meals
-========================================
-Hamberger........................  12.00
-Cheese Burger....................  13.50
-Veggie Burger....................  14.50
-Hot Dog..........................   6.00
-Pasta with Tomato sauce..........  15.50
-Fries............................   5.00
-Poutine with beef................   7.00
-Poutine..........................   6.00
-========================================
-Testing list drinks.................................
-List Of Avaiable Drinks
-========================================
-Pepsi............................   4.50
-Orange Juice.....................   3.50
-Coffee...........................   5.00
-========================================
-Testing order food..................................
-Enter:
- 1
- 1
- abc
- ---->
-      Food Menu
-       1- Hamberger
-       2- Cheese Burger
-       3- Veggie Burger
-       4- Hot Dog
-       5- Pasta with Tomato sauce
-       6- Fries
-       7- Poutine with beef
-       8- Poutine
+Script started on Sat 09 Aug 2025 11:45:11 PM EDT
+==233111== Memcheck, a memory error detector
+==233111== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==233111== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==233111== Command: ms.exe
+==233111== 
+Seneca Restaurant 
+ 1- Order
+ 2- Print Bill
+ 3- Start a New Bill
+ 4- List Foods
+ 5- List Drinks
+ 0- End Program
+> 1
+   Order Menu
+    1- Food
+    2- Drink
+    0- Back to main menu
+   > 2
+      Drink Menu
+       1- Pepsi
+       2- Orange Juice
+       3- Coffee
        0- Back to Order
-      > 1
-         Food Size Selection
-          1- Adult
-          2- Child
+      > 2
+         Drink Size Selection
+          1- Small
+          2- Medium
+          3- Larg
+          4- Extra Large
           0- Back
-         > 1
-Special instructions
-> abc
-Passed!
-Testing order drink.................................
-Enter:
- 1
- 1
- ---->
+         > 3
+   Order Menu
+    1- Food
+    2- Drink
+    0- Back to main menu
+   > 2
+      Drink Menu
+       1- Pepsi
+       2- Orange Juice
+       3- Coffee
+       0- Back to Order
+      > 0
+   Order Menu
+    1- Food
+    2- Drink
+    0- Back to main menu
+   > 2
       Drink Menu
        1- Pepsi
        2- Orange Juice
@@ -67,43 +58,49 @@ Enter:
           3- Larg
           4- Extra Large
           0- Back
+         > 0
+   Order Menu
+    1- Food
+    2- Drink
+    0- Back to main menu
+   > 2
+      Drink Menu
+       1- Pepsi
+       2- Orange Juice
+       3- Coffee
+       0- Back to Order
+      > 3
+         Drink Size Selection
+          1- Small
+          2- Medium
+          3- Larg
+          4- Extra Large
+          0- Back
          > 1
-Passed!
-Testing print bill on screen.........................
-Bill # 001 =============================
-Hamberger...................Adult  12.00 >> abc
-Pepsi.......................SML..   2.25
-                     Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
-========================================
-Testing saving bill in a file........................
-Bill # 001 =============================
-Hamberger...................Adult  12.00
-Pepsi.......................SML..   2.25
-                     Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
-========================================
-testing hassUnsavedBill()............................
-Passed hassUnsavedBill()!
-testing restBill()...................................
-Saved bill number 1
-Starting bill number 2
-Bill # 001 =============================
-Hamberger...................Adult  12.00
-Pepsi.......................SML..   2.25
-                     Total:        14.25
-                       Tax:         1.85
-                 Total+Tax:        16.10
-========================================
-==221545== 
-==221545== HEAP SUMMARY:
-==221545==     in use at exit: 0 bytes in 0 blocks
-==221545==   total heap usage: 97 allocs, 97 frees, 147,035 bytes allocated
-==221545== 
-==221545== All heap blocks were freed -- no leaks are possible
-==221545== 
-==221545== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+   Order Menu
+    1- Food
+    2- Drink
+    0- Back to main menu
+   > 0
+Seneca Restaurant 
+ 1- Order
+ 2- Print Bill
+ 3- Start a New Bill
+ 4- List Foods
+ 5- List Drinks
+ 0- End Program
+> 0
+   You have bills that are not saved. Are you sue you want to exit?
+    1- Yes
+    0- No
+   > 1
+==233111== 
+==233111== HEAP SUMMARY:
+==233111==     in use at exit: 0 bytes in 0 blocks
+==233111==   total heap usage: 133 allocs, 133 frees, 110,423 bytes allocated
+==233111== 
+==233111== All heap blocks were freed -- no leaks are possible
+==233111== 
+==233111== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-Script done on Sat 09 Aug 2025 10:54:46 PM EDT
+Script done on Sat 09 Aug 2025 11:45:30 PM EDT

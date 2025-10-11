@@ -1,0 +1,117 @@
+/usr/bin/ld: Dwarf Error: found dwarf version '5', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o: In function `main':
+tester_1_prof.cpp:(.text+0x122): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::Rogue(char const*, int, int, int)'
+tester_1_prof.cpp:(.text+0x146): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::Rogue(char const*, int, int, int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '8448', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x16a): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::Rogue(char const*, int, int, int)'
+tester_1_prof.cpp:(.text+0x19a): undefined reference to `seneca::Archer<seneca::Crossbow>::Archer(char const*, int, int, int, seneca::Crossbow)'
+tester_1_prof.cpp:(.text+0x1ca): undefined reference to `seneca::Archer<seneca::Crossbow>::Archer(char const*, int, int, int, seneca::Crossbow)'
+tester_1_prof.cpp:(.text+0x1fa): undefined reference to `seneca::Archer<seneca::Bow>::Archer(char const*, int, int, int, seneca::Bow)'
+/usr/bin/ld: Dwarf Error: found dwarf version '153', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x236): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '6448', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x272): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::Barbarian(char const*, int, int, int, seneca::Axe, seneca::Axe)'
+tester_1_prof.cpp:(.text+0x2ae): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::Barbarian(char const*, int, int, int, seneca::BareHands, seneca::BareHands)'
+/usr/bin/ld: Dwarf Error: found dwarf version '166', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x2ea): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '62996', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x326): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '1', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x362): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '11045', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x39e): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '63252', this reader only handles version 2, 3 and 4 information.
+tester_1_prof.cpp:(.text+0x3da): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found address size '60', this reader can not handle sizes greater than '8'.
+tester_1_prof.cpp:(.text+0x416): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)'
+/usr/bin/ld: Dwarf Error: found dwarf version '10501', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:tester_1_prof.cpp:(.text+0x452): more undefined references to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::Barbarian(char const*, int, int, int, seneca::Sword, seneca::Sword)' follow
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE]+0x10): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '15832', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE]+0x18): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '1288', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE]+0x40): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::clone() const'
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE]+0x48): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '55305', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_8FireballENS_5SwordEEE]+0x50): undefined reference to `seneca::Barbarian<double, seneca::Fireball, seneca::Sword>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '4096', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE[_ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE]+0x10): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '75', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE[_ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE]+0x18): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '2558', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE[_ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE]+0x40): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::clone() const'
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE[_ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE]+0x48): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '31660', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE[_ZTVN6seneca9BarbarianINS_14InfiniteHealthENS_8FireballENS_9BareHandsEEE]+0x50): undefined reference to `seneca::Barbarian<seneca::InfiniteHealth, seneca::Fireball, seneca::BareHands>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '65300', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE[_ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE]+0x10): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '61', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE[_ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE]+0x18): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '21531', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE[_ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE]+0x40): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE[_ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE]+0x48): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '55305', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE[_ZTVN6seneca9BarbarianIdNS_4HealENS_3AxeEEE]+0x50): undefined reference to `seneca::Barbarian<double, seneca::Heal, seneca::Axe>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '10240', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE]+0x10): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '51', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE]+0x18): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '257', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE]+0x40): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '61', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE]+0x48): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '5659', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE[_ZTVN6seneca9BarbarianIdNS_6BersekENS_5SwordEEE]+0x50): undefined reference to `seneca::Barbarian<double, seneca::Bersek, seneca::Sword>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_3BowEEE[_ZTVN6seneca6ArcherINS_3BowEEE]+0x10): undefined reference to `seneca::Archer<seneca::Bow>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '55305', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_3BowEEE[_ZTVN6seneca6ArcherINS_3BowEEE]+0x18): undefined reference to `seneca::Archer<seneca::Bow>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '14336', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_3BowEEE[_ZTVN6seneca6ArcherINS_3BowEEE]+0x40): undefined reference to `seneca::Archer<seneca::Bow>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '72', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_3BowEEE[_ZTVN6seneca6ArcherINS_3BowEEE]+0x48): undefined reference to `seneca::Archer<seneca::Bow>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '259', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_3BowEEE[_ZTVN6seneca6ArcherINS_3BowEEE]+0x50): undefined reference to `seneca::Archer<seneca::Bow>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '61', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_8CrossbowEEE[_ZTVN6seneca6ArcherINS_8CrossbowEEE]+0x10): undefined reference to `seneca::Archer<seneca::Crossbow>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '58395', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_8CrossbowEEE[_ZTVN6seneca6ArcherINS_8CrossbowEEE]+0x18): undefined reference to `seneca::Archer<seneca::Crossbow>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_8CrossbowEEE[_ZTVN6seneca6ArcherINS_8CrossbowEEE]+0x40): undefined reference to `seneca::Archer<seneca::Crossbow>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '55305', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_8CrossbowEEE[_ZTVN6seneca6ArcherINS_8CrossbowEEE]+0x48): undefined reference to `seneca::Archer<seneca::Crossbow>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '18432', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca6ArcherINS_8CrossbowEEE[_ZTVN6seneca6ArcherINS_8CrossbowEEE]+0x50): undefined reference to `seneca::Archer<seneca::Crossbow>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '45', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE[_ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE]+0x10): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '262', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE[_ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE]+0x18): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '61', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE[_ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE]+0x40): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '9755', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE[_ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE]+0x48): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE[_ZTVN6seneca5RogueINS_14InfiniteHealthENS_6BersekES2_EE]+0x50): undefined reference to `seneca::Rogue<seneca::InfiniteHealth, seneca::Bersek, seneca::Bersek>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '55305', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueIdNS_8FireballES1_EE[_ZTVN6seneca5RogueIdNS_8FireballES1_EE]+0x10): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '22528', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueIdNS_8FireballES1_EE[_ZTVN6seneca5RogueIdNS_8FireballES1_EE]+0x18): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '114', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueIdNS_8FireballES1_EE[_ZTVN6seneca5RogueIdNS_8FireballES1_EE]+0x40): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '265', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueIdNS_8FireballES1_EE[_ZTVN6seneca5RogueIdNS_8FireballES1_EE]+0x48): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '82', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueIdNS_8FireballES1_EE[_ZTVN6seneca5RogueIdNS_8FireballES1_EE]+0x50): undefined reference to `seneca::Rogue<double, seneca::Fireball, seneca::Fireball>::takeDamage(int)'
+/usr/bin/ld: Dwarf Error: found dwarf version '52507', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE[_ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE]+0x10): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::getAttackAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '5120', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE[_ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE]+0x18): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::getDefenseAmnt() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '44052', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE[_ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE]+0x40): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::clone() const'
+/usr/bin/ld: Dwarf Error: found dwarf version '26624', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE[_ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE]+0x48): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::attack(seneca::Character*)'
+/usr/bin/ld: Dwarf Error: found dwarf version '114', this reader only handles version 2, 3 and 4 information.
+/tmp/ccuDmetd.o:(.rodata._ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE[_ZTVN6seneca5RogueINS_11SuperHealthENS_4HealENS_8FireballEEE]+0x50): undefined reference to `seneca::Rogue<seneca::SuperHealth, seneca::Heal, seneca::Fireball>::takeDamage(int)'
+collect2: error: ld returned 1 exit status
