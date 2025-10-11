@@ -28,4 +28,6 @@ public:
 
 } // namespace seneca
 
+#include "rogue.cpp"
+
 #endif // SENECA_ROGUE_H

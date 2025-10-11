@@ -26,4 +26,7 @@ namespace seneca {
 
 }
 
+
+#include "archer.cpp"
+
 #endif // SENECA_ARCHER_H

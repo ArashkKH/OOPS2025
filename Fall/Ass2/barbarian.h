@@ -27,4 +27,6 @@ public:
 
 } // namespace seneca
 
+#include "barbarian.cpp"
+
 #endif // SENECA_BARBARIAN_H

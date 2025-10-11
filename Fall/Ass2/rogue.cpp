@@ -61,4 +61,6 @@ void Rogue<T, FirstAbility_t, SecondAbility_t>::takeDamage(int dmg) {
     CharacterTpl<T>::takeDamage(dmg);
 }
 
+
+
 } // namespace seneca
