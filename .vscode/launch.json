@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/project/ms3",
-      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/project/ms3/build/Debug/outDebug",
+      "cwd": "d:/Users/arash/Documents/GitHub/OOPS2025/Fall/Ass2",
+      "program": "d:/Users/arash/Documents/GitHub/OOPS2025/Fall/Ass2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

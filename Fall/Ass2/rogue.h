@@ -2,6 +2,7 @@
 #define SENECA_ROGUE_H
 #include <iostream>
 #include "character.h"
+#include "characterTpl.h"
 #include "weapons.h"
 namespace seneca {
 

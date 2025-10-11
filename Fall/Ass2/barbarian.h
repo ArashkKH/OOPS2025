@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "character.h"
+#include "characterTpl.h"
 
 namespace seneca {
 
